@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+      
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./style.css">
+      <link rel="icon" type="image/x-icon" href="./assets/favicon.svg">
+      <title>Web Development Notes</title>
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <!-- jquery ui -->
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+      <!-- fonts -->
+      <link rel="spanconnect" href="https://fonts.googleapis.com">
+      <link rel="spanconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Single+Day&display=swap" rel="stylesheet">
+      <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&f[]=general-sans@1,2&display=swap" rel="stylesheet">
+      <!-- bootstrap icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <!-- custom css -->
+      <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top rounded-top-0 rounded">
+            <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Web Development Notes</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#jsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">JavaScript</a>
+                                    <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#useful">Useful Things</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#datatypesandoperators">Data types and Operators</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#arrays">Arrays</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#condstatements">Conditional Statements</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#forloops">"For" Loops</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#prompts">Prompts</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#switch">Switch</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#objects">Objects</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#nesteddata">Nested Data</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#functions">Functions</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#scoping">Scopes</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#methods">Object Methods</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#manipulative">Manipulative Methods</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#iterative">Iterative Methods</a></li>
+                                          <li><a class="dropdown-item btn btn-sm rounded" href="#filtering">Filtering Methods</a></li>
+                                    </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">APIs</a>
+                                    <ul class="dropdown-menu">
+
+                                    </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#es6nodejsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">ES6 & Node.js</a>
+                                    <ul class="dropdown-menu">
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#arrowfunctions">Arrow Functions</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#letconst">"Let" & "Const"</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                    </ul>
+                              </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                  </div>
+            </div>
+      </nav>
+
+      <div class="container-fluid" id="jsnotes">
+            <h1 class="py-4 text-center">JavaScript</h1>
+            <div class="row justify-content-evenly">
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="useful">
+                              <h3 class="text-center py-2">Useful Things</h3>
+                              <ul>
+                                    <li><code>Math.random()</code> always chooses a random number between 0 and 1. The <code>Math.round()</code> rounds the number to the nearest integer. Therefore, using <code>Math.round(Math.random() * <span class="input">number</span>)</code> can get random numbers greater than 1. e.g. <code>Math.round(Math.random() * 3)</code> would return a random integer between 1 and 3.</li>
+                                    <li><code>Math.round()</code> rounds to the nearest integer, and it has 2 variations: <code>Math.ceil()</code> and <code>Math.floor()</code> which round up and down, respectively.</li>
+                                    <li>There is also the <code>.toFixed()</code> function which lets you round to a specified decimal place.</li>
+                                    <li>When concatenating variables and strings, a quicker way to do it is to use <strong>template literals</strong>: <code>`</code> and <code>${}</code>. e.g. <code>confirm(order.name + ": place the order for " + order.item + "?")</code> could also be written as <code>confirm(`${order.name}: place the order for ${order.item}?`)</code></li>
+                                    <li>When listing the values of an array or multiple values in one line, you can use <code>.join()</code> which lets you concatenate with a custom string that you put in between the brackets. e.g. <code>console.log(<span class="input">arrayName</span>.join(", "))</code> would list all the values of the array separated by ", ".</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="datatypesandoperators">
+                              <h3 class="text-center py-2">Data types and Operators</h3>
+                              <ul>
+                                    <li>Using <code>console.log(<span class="input">input</span>)</code> prints the output to the console. In a .html file, this can be accessed using chrome dev tools, and navigating to the Console tab. e.g. <code>console.log("Hello World")</code> or <code>console.log(24 == 2*12)</code></li>
+                                    <li>Use <code>var <span class="input">variableName</span> = <span class="input">variable</span></code>, e.g. <code>var favouriteColour = "blue"</code>                                          </li>
+                                    <li>There are 4 basic data types: string, number, boolean and undefined. JavaScript is loosely typed, so the type of variable is tied to the value held in the variable not the variable iself.</li>
+                                          <ul>
+                                                <li>Strings: <code>var penColour = "black"</code>. Note that strings are alphanumeric - any text enclosed in (either single or double) quotes can be a string.</li>
+                                                <li>Numbers: <code>var age = 18</code>. Number variables can be both integers or floats/decimals.</li>
+                                                <li>Booleans: <code>var status = true</code>. Booleans are binary variables - either true or false.</li>
+                                                <li>Undefined: Undefined variables haven't been assigned values.</li>
+                                          </ul>
+                                    <li>Using <code>console.log(typeof age)</code> (if the above variables were also stored in the JS file) would return <code>number</code> in the console.</li>
+                                    <li>Arithmetic operators combine with numbers to form an expression that returns a single number. Assume that <code>var a = 10</code> and <code>var b = 2</code>.</li>
+                                          <ul>
+                                                <li><code>console.log(a + b)</code> returns 12</li>
+                                                <li><code>console.log(a * b)</code> returns 20</li>
+                                                <li><code>console.log(a - b)</code> returns 8</li>
+                                                <li><code>console.log(a / b)</code> returns 5</li>
+                                                <li>There is also the modulus operator <code>%</code> which returns the remainder from a division. For example, <code>console.log(4 % 15)</code> would return 3.</li>
+                                          </ul>
+                                    <li>Comparison operators can compare values, or values AND data types:</li>
+                                          <ul>
+                                                <li>Use <code>==</code> for just comparing values, and <code>===</code> to check strict equality. Similarly, <code>!=</code> and <code>!==</code> will check for just values, and both values and data type, respectively.</li>
+                                                <li>Use <code>&lt;</code> or <code>&gt;</code> for (strictly) greater than or less than; and <code>&lt;=</code> and <code>&gt;=</code> for greater than or equal to and less than or equal to.</li>
+                                          </ul>
+                                    <li>Logical operators can take in two or more expressions and compare their results. You can store the output of an expression in a variable (e.g. <code>var test1 = a * b</code>) and then compare them using that method.</li> 
+                                          <ul>
+                                                <li>For an AND test, i.e. to check whether all expressions are true, use <code>&&</code>. The output of this: <code>console.log(test1 && test2)</code> would be a boolean value, either true or false. It would compare the values of 2 expressions, test1 and test2, then check to see if their values match, and print either true or false to the console.</li>
+                                                <li>For an OR test, i.e. to check whether any of the expressions are true, use <code>||</code>. The ouput of this: <code>console.log(test1 || test2)</code> would also be a boolean value but if either test1 or test2 were true, the console would print true.</li>
+                                          </ul>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="arrays">
+                              <h3 class="text-center py-2">Arrays</h3>
+                              <ul>
+                                    <li>An array can store any data type, but it stores a list of data inside one variable: <code>var <code>arrayName</code> = [<span class="input">item1</span>, <span class="input">item2</span>, <span class="input">item3</span>, etc.]</code></li>
+                                    <li>You can access the entire array by simply using the array's name: e.g. If there was an array as such: <code>var names = ["Adam, "John", "James", "Leo"]</code> then typing something that references "names", e.g. <code>console.log(names)</code> would return the entire array.</li>
+                                    <li>You can also return a single element of the array, by referencing the index number of the array. The first element is always 0. So running <code>console.log(names[1])</code> would return John, (not Adam).</li>
+                                    <li>Indexing can also be used to replace data in an array. If we wanted to switch out the name Adam with Alex, running <code>names[0] = "Alex"</code> would redefine the 0 index (formerly Adam) with the string "Alex".</li>
+                                    <li>To find out how many elements are inside an array, you can use <code>console.log(<span class="input">arrayName</span>.length)</code>. Adding <code>.array</code> onto the end of an array name will return the number of items inside the array - it can be used outside of <code>console.log()</code> too.</li>
+                                          <ul>
+                                                <li>Using this method, you can reference the last item of an array (without knowing it's length) by using <code>console.log(<span class="input">arrayName</span>[<span class="input">arrayName</span>.length -1])</code></li>
+                                                <li>This can be shortened in JS to <code>console.log(<span class="input">arrayName</span>.at(-1))</code>. Swapping <code>-1</code> for any number can therefore find the nth last item.</li>
+                                          </ul>
+                              </ul>      
+                        </div>
+                        <div class="card my-2" id="nesteddata">
+                              <h3 class="text-center py-2">Nested Data</h3>
+                              <ul>
+                                    <li>Arrays and objects can nest inside of one another depending on what makes sense in the context, e.g.:
+                                          <div class="code block m-2">
+                                                <pre>var bankAccount = {</pre>
+                                                <pre>      user: {</pre>
+                                                <pre>            firstName: "Name",</pre>
+                                                <pre>            lastName: "Surname",</pre>
+                                                <pre>            address: {</pre>
+                                                <pre>                  houseNumber: "house number",</pre>
+                                                <pre>                  city: "city name",</pre>
+                                                <pre>                  postcode: "postcode",</pre>
+                                                <pre>                  nearestBranch: ["branch1", "branch2", "branch3"]</pre>
+                                                <pre>            }</pre>
+                                                <pre>      }</pre>
+                                                <pre>      balance:{</pre>
+                                                <pre>            primary: 10000,</pre>
+                                                <pre>            savings: 12093,</pre>
+                                                <pre>            investmentISA: 1023102</pre>
+                                                <pre>      }</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    </li>
+                                    <li>You can access nested objects in the same way as objects: i.e. the <code>.keyName</code> or <code>[keyName]</code>; and you can access arrays in the same way too: <code>arrayName[i]</code>.</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="scoping">
+                              <h3 class="text-center py-2">Scopes</h3>
+                              <ul>
+                                    <li>Global Scope: A variable declared in global scope is accessible to all functions (and the rest of the .js file).</li>
+                                    <li>Local Scope: Variables declared in local scope (i.e. inside a function) is not accessible outside of the function, though.</li>
+                                    <li>Lexical Scope: <code>var</code> is considered lexical scoping.</li>
+                                    <li>Block Scope: <code>const</code> and <code>let</code> as used in loops or if statements, are considered "block" scoping. What this means is the variables set with those keywords will only exist inside that block of code. This allows for a greater precision of when the variable is used - it is even narrower than local scope.</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="prompts">
+                              <h3 class="text-center py-2">Prompts</h3>
+                              <ul>
+                                    <li>There are three types of prompt: the alert, the confirm and the prompt.</li>
+                                    <li>The format for an alert is: <code>alert("<span class="input">Hello world</span>")</code></li>
+                                    <li>Confirm works like this: <code>confirm("<span class="input">Typically a question</span>")</code>. Because a confirm prompt requires a user input - clicking "Ok" returns true, and "Cancel" returns false - it can be used with variables to get user-defined variables easily. e.g. <code>var <span class="input">variableName</span> = confirm("<span class="input">question</span>")</code>. The answer chosen by the user will now be stored in <span class="input">variableName</span>.</li>
+                                    <li>A prompt acts like a confirm, except instead of a boolean response ("Ok" or "Cancel"), the user can input any string response. <code>prompt("<span class="input">Typically a question</span>")</code>. Again, using this with variables is an easy way to gather user input, e.g. <code>var <span class="input">variableName</span> = prompt("<span class="input">question</span>")</code> - and this time the answer can be anything the user types in the prompt input field. Even if the user types a number here, the result will always be a string.</li>
+                              </ul>
+                        </div>
+                  </div>
+
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="condstatements">
+                              <h3 class="text-center py-2">Conditional Statements</h3>
+                              <ul>
+                                    <li>Conditional statements (a.k.a. "if" statements) are formatted like this:
+                                          <div class="code block m-2">
+                                                <pre>if (<span class="input">condition</span>) {</pre>
+                                                <pre>       <span class="input">code to run if condition is true</span></pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    e.g. <div class="code block m-2">
+                                                <pre>if (hungerLevel &lt;= 20){</pre>
+                                                <pre>      console.log("I'm hungry!")</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    </li>
+                                    <li>It's often helpful to have an "else" statement as well:
+                                          <div class="code block m-2">
+                                                <pre>if (hungerLevel &lt;= 20){</pre>
+                                                <pre>      console.log("I'm hungry!")</pre>
+                                                <pre>} else {</pre>
+                                                <pre>      console.log("I'm full.")</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    Likewise you can have an else-if statement which allows for checking more than 1 condition:
+                                    <div class="code block m-2">
+                                          <pre>if (<span class="input">condition1</span>){</pre>
+                                          <pre>      <span class="input">code to run if condition1 is true</span></pre>
+                                          <pre>} else if (<span class="input">condition2</span>) {</pre>
+                                          <pre>      <span class="input">code to run if condition2 is true</span></pre>
+                                          <pre>} else if (<span class="input">condition3</span>) {</pre>
+                                          <pre>      <span class="input">code to run if condition3 is true</span></pre>
+                                          <span class="comment">// Repeat as necessary... You can also include an "else" at the end as in a normal if statement too.</span>
+                                          <pre>} else {</pre>
+                                          <pre>      <span class="input">code to run if no conditions are met</span></pre>
+                                          <pre>} </pre>
+                                    </div>
+                                    </li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="switch">
+                              <h3 class="text-center py-2">Switch</h3>
+                              <ul>
+                                    <li>A switch statement is essentially an alternative to an else-if statement that has a lot of else-if layers. Switch is a cleaner version of writing that out.</li>
+                                    <li>The switch statement can run a different block of code based on the value of the input (typically a variable).</li>
+                                    <li>The syntax is as below:
+                                          <div class="code block m-2">
+                                                <pre>switch (<span class="input">variableName</span>) {</pre>
+                                                <pre>      case <span class="input">value1</span>:</pre>  
+                                                <pre>      <span class="input">code to run if the variable is value1</span>;</pre>
+                                                <pre>      break;</pre>
+                                                <pre>      case <span class="input">value2</span>:</pre>  
+                                                <pre>      <span class="input">code to run if the variable is value2</span>;</pre>
+                                                <pre>      break;</pre>
+                                                <span class="comment">// Repeat as necessary...</span>
+                                                <pre>}</pre>
+                                          </div>
+                                    </li>
+                                    <li>To include what would be the "else" part to the above "else-if" alternative, you just add a <code>default</code> case to the code block. This will return only if no other conditions are met in the switch statement.
+                                    <div class="code block m-2">
+                                          <span class="comment">      ...</span> 
+                                          <pre>      <span class="input">code to run if the variable is value2</span>;</pre>
+                                          <pre>      break;</pre>
+                                          <span class="comment">// Repeat as necessary...</span>
+                                          <pre>      default:</pre>
+                                          <pre>      <span class="input">code to run if the variable is not any of the cases above</span></pre>
+                                          <pre>}</pre>
+                                    </div></li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="forloops">
+                              <h3 class="text-center py-2">"For" Loops</h3>
+                              <ul>
+                                    <li>Iterative loops (a.k.a. "for" loops) are formatted like this:
+                                          <div class="code block m-2">
+                                                <pre>for (<span class="input">expression 1</span>; <span class="input">expression 2</span>; <span class="input">expression 3</span>) {</pre>
+                                                <pre>       continue here</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                          <ul>
+                                                <li>Expression 1 is executed (one time) before the execution of the code block. It is used to initialise the for loop, i.e. set the starting variables. You can use multiple values here, seperated by commas.</li>
+                                                <li>The next expression, separated by a semicolon is: Expression 2, which defines the condition for executing the code block. The for loop will repeat until this condition is met. If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.</li>
+                                                <li>Expression 3 is executed (every time) after the code block has been executed. This is how we change the variable/value we intialised in expression 1 so that it eventually fulfils expression 2 and stops the loop from running.</li>
+                                          </ul>
+                                    e.g. <div class="code block m-2">
+                                                <pre>for (var i = 0; i &lt;= 20; i++){</pre>
+                                                <pre>      console.log("i is less than or equal to 20.")</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    In this example, the <code>i</code> in the iterator is just a variable, it starts at 0 (or the first item in an array). The stopping condition is when i is strictly greater than 20 (i.e. the for loop will run as long as i is less than or equal to 20), and the means of increasing the iterator is <code>i++</code> which is shorthand for <code>i = i + 1</code>. This way every time the for loop runs, <code>i</code> becomes closer and closer to meeting the stopping condition.
+                                    </li>
+                                    <li>If you use <code>var</code> inside a loop and a variable of the same name exists outside the loop, that variable will be redefined. If you use <code>let</code> the variable declared there will only exist inside that loop.
+                                          <ul>
+                                                <li>
+                                                      e.g. <div class="code block m-2">
+                                                                  <pre>var i = 3</pre>
+                                                                  <pre>for (var i = 0; i &lt;= 20; i++){</pre>
+                                                                  <pre>      console.log("i is less than or equal to 20.")</pre>
+                                                                  <pre>}</pre>
+                                                            </div>
+                                                      In this example, the variable <code>i</code> would be 20 after the loop, as it was redefined as 0, then for as long as <code>i</code> was less than or equal to 20, it kept increasing by 1, until it reached 20 and the loop stopped.
+                                                </li>
+                                                <li>
+                                                      e.g. <div class="code block m-2">
+                                                                  <pre>var i = 7</pre>
+                                                                  <pre>for (let i = 0; i &lt;= 20; i++){</pre>
+                                                                  <pre>      console.log("i is less than or equal to 20.")</pre>
+                                                                  <pre>}</pre>
+                                                      </div>
+                                                      In this example, the variable <code>i</code> remains 7, even though it was redefined as 0 and increased to 20 - those actions happened only inside the for loop.
+                                                </li>
+                                          </ul>
+                                    </li>
+                                    <li>You can combine iterations with an array to apply an action to all items in an array:
+                                          <div class="code block m-2">
+                                                <pre>var <span class="input">arrayName</span> = ["<span class="input">item0</span>", "<span class="input">item1</span>", "<span class="input">item2</span>", "<span class="input">item3</span>"];</pre>
+                                                <pre>for (var i = 0; i &lt; <span class="input">array length</span>; i++){</pre>
+                                                <pre>      <span class="input">action to apply to each array item</span></pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    e.g.
+                                          <div class="code block m-2">
+                                                <pre>var animals = ["chicken", "duck", "cat", "shark"];</pre>
+                                                <pre>for (var i = 0; i &lt; 4; i++){</pre>
+                                                <pre>      var currentAnimal = animals[i];</pre>
+                                                <span class="comment">// This sets the current array item as a variable so we can manipulate it easier.</span>
+                                                <pre>      console.log(currentAnimal + "s")</pre>
+                                                <span class="comment">// This will print the current animal with an "s" appended, to make it the plural form of the word.</span>
+                                                <pre>}</pre>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+
+                  </div>
+
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="functions">
+                              <h3 class="text-center py-2">Functions</h3>
+                              <ul>
+                                    <li>The syntax for a function is <code>function <span class="input">functionName</span>(<span class="input">input parameter</span>) {<span class="input">actions</span>}</code>. The <code>functionName</code> is any name, typically one that describes the action the function is taking. The <code>input parameter</code> is not necessary, but if used typically describes what type of data the function will run on, and must be used if the function has a <code>functionInput</code> to refer to that input. The <code>actions</code> are what actions you want the function to take.
+                                      
+                                    To call the function, you use <code><span class="input">functionName</span>(<span class="input">functionInput</span>)</code>. e.g.:
+                                          <div class="code block m-2">
+                                                <pre>var fruitsA = ["pears", "apples", "oranges"]</pre>
+                                                <pre>var fruitsB = ["pineapple", "peach", "mango"]</pre>
+                                                
+                                                <pre>function listFruits (arr) {</pre> 
+                                                      <span class="comment">//"arr" is just a random name to indicate we intend to use this function on arrays. Some value must be used here though, as the function is being used on arrays.</span>
+                                                <pre>      for (let i = 0; i &lt; arr.length; i++) {</pre>
+                                                <pre>            console.log(arr[i])</pre>
+                                                <pre>      }</pre>
+                                                <pre>}</pre>
+                                                
+                                                <pre>listFruits(fruitsA)</pre>
+                                                <pre>listFruits(fruitsB)</pre>
+                                          </div>
+                                    This lets us list out all of the values of both arrays, without making a separate "for" loop for each array.
+                                    </li>
+                                    <li>Functions can be called again, and at any point not just at page load, which makes them much more flexible.</li>
+                                    <li>Functions can have multiple inputs, e.g. <code>function <span class="input">functionName</span>(<span class="input">input1</span>, <span class="input">input2</span>) {}</code></li>
+                                    <li>Functions can return values with the use of the <code>return</code> keyword - this is useful for getting outputs from functions.</li>
+                                          <ul>
+                                                <li>The <code>return</code> keyword exits a function once it is read within the function. This can be used to avoid running through other lines of a function</li>
+                                          </ul>
+                                    <li>Functions can also be written as expressions (as opposed to declarations, which is the above way): <code>var <span class="input">functionName</span> = function(<span class="input">inputParameters</span>) {}</code>. It can be called in the same manner.</li>
+
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="objects">
+                              <h3 class="text-center py-2">Objects</h3>
+                              <ul>
+                                    <li>An object can store a list of key:value pairs. The "key" basically replaces the 0, 1, 2, ... index - it acts the same way.</li>
+                                    <li>The object can store different data types, e.g.:
+                                          <div class="code block m-2">
+                                                <pre>var planet = {</pre>
+                                                <pre>      name: "Earth",</pre>
+                                                <pre>      age: "4.543 billion years",</pre>
+                                                <pre>      moons: 1,</pre>
+                                                <pre>      isPopulated: true,</pre>
+                                                <pre>      population: "8.045 billion",</pre>
+                                                <pre>}</pre>
+                                          </div>
+                                    </li>
+                                    <li>To reference a particular item within an object, you would use <code><span class="input">objectName</span>.<span class="input">keyName</span></code> or <code><span class="input">objectName</span>[<span class="input">"key Name"</span>]</code>, if the keyname is a string. You can use the <code>[]</code> method for regular key names too, but you can't use strings with the <code>.</code> method.</li>
+                                    <li>A method is a function that is inside of an object, e.g. <code>.log</code> or <code>.random</code>. The only difference between a method an a function is that a method lives inside an object.</li>
+                                    <li>Use <code>Object.keys(<span class="input">objectName</span>)</code> to list all the keys, <code>Object.values(<span class="input">objectName</span>)</code> to list the values and <code>Object.entries(<span class="input">objectName</span>)</code> to list all the entries (keys and values).</li>
+                                    <li>Converting these into arrays can then let us iterate through them with ease. For example, if I had a menu as below and wanted to find the total cost of all items, I could do something similar to this:
+                                          <div class="code block m-2">                                                  
+                                                <pre>var prices = Object.values(menu);</pre>
+                                                <pre>console.log(prices);</pre>
+                                                
+                                                <pre>var totalprice = 0.00;</pre>
+                                                
+                                                <pre>for (let i = 0; i &lt; prices.length; i++) {</pre>
+                                                <pre>      const price = prices[i];</pre>
+                                                <pre>      totalprice += price;</pre>
+                                                <pre>}</pre>
+                                                
+                                                <pre>console.log(`The total price for all items is £${totalprice}`)</pre>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="methods">
+                              <h3 class="text-center py-2">Object Methods</h3>
+                              <ul>
+                                    <li>Objects can store more than primitive data types. Objects can embed functions into them as the value of a key-value pair. It can then be referenced the same way you would reference a key: <code><span class="input">objectName</span>.<span class="input">keyName</span>()</code> BUT you must add <code>()</code> afterwards.
+                                          <div class="code block m-2">
+                                                <pre>var person = {</pre>
+                                                <pre>      name: "myName",</pre>
+                                                <pre>      age: 21,</pre>
+                                                <pre>      tellFunFact: function () {</pre>
+                                                <pre>            console.log(`My favourite number is ${1+2}`)</pre>
+                                                <pre>      }</pre>
+                                                <pre>}</pre>
+                                                
+                                                <pre>person.tellFunFact()</pre>
+                                          </div>
+                                    This would show "My favourite number is 3" in the console.
+                                    </li>
+                                    <li>The <code>this</code> keyword references the outermost object. If you use <code>console.log(this)</code> the console will log the "Window" object, which keeps track of all the information and everything the user can see, e.g. viewport, HTML, etc. It is the outermost object we have to deal with when coding in the front-end in JavaScript.</li>
+                                          <ul>
+                                                <li>The <code>this</code> keyword can more usefully be used inside our objects/methods though. It'll refer to the object it is contained inside.</li>
+                                                <div class="code block m-2">
+                                                      <pre>var user = {</pre>
+                                                      <pre>      name: "J",</pre>
+                                                      <pre>      surname: "G",</pre>
+                                                      <pre>      age: 21,</pre>
+                                                      <pre>      displayUser: function() {</pre>
+                                                      <pre>            console.log(`The user is ${this.name} ${this.surname} and they are ${this.age} years old.`)</pre>
+                                                      <pre>      }</pre>
+                                                      <pre>}</pre>
+                                                      
+                                                      <pre>user.displayUser()</pre>
+                                                </div>
+                                                <li>The above example would display all the other values in a console log of <code>The user is J G and they are 21 years old</code>, despite the method itself being inside the object.</li>
+                                          </ul>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="manipulative">
+                              <h3 class="text-center py-2">Manipulative Methods</h3>
+                              <ul>
+                                    <li>Array Methods:</li>
+                                    <ul>
+                                          <li><code><span class="input">arrayName</span>.sort()</code> returns a sorted array in alphabetical order.</li>
+                                          <li><code><span class="input">arrayName</span>.push()</code> adds elements to the end of an array. Can take more than one parameter.</li>
+                                                <ul>
+                                                      <li>Conversely, <code><span class="input">arrayName</span>.unshift()</code> adds elements to the beginning of the array. Can also take more than one input.</li>
+                                                </ul>
+                                          <li>To log elements from one array into a new array, use <code><span class="input">arrayName</span>.slice(<span class="input">start index</span>, <span class="input">stop index</span>)</code>. e.g. writing <code><span class="input">arrayName</span>.slice(3,6)</code> would start a new array with the 3rd index of the first array, and take the 4th and 5th indices, but stop before the 6th index.</li>
+                                          <li><code><span class="input">arrayName</span>.join(<span class="input">separator</span>)</code> joins all items of an array with the specified <code>separator</code>.</li>
+                                          <li>The splice method can add, remove or replace elements within an array: <code><span class="input">arrayName</span>.splice(<span class="input">start index</span>, <span class="input">number of items to delete</span>, <span class="input">item(s) to add</span>).</code>. e.g. <code>arrayName.splice(4,2,"apple","pear")</code> would remove the 4th and 5th index (which are the 3rd and 4th items) of the <code>arrayName</code> array, and insert "apple" and "pear" into the array starting at the 4th index.</li>
+                                    </ul>
+                                    <li>String Methods:</li>
+                                    <ul>
+                                          <li><code><span class="input">stringName</span>.split(<span class="input">separator</span>)</code> separates a string into individual items of an array every time the <code>separator</code> appears. e.g. <code>string.split(",")</code> would split the original string into parts every time there was a <code>,</code>. If the <code>separator</code> is left blank, the string splits at every character.</li>
+                                          <li><code><span class="input">stringName</span>.replace(<span class="input">characters to replace</span>, <span class="input">characters to replace with</span>)</code> does what it says.</li>
+                                    </ul>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="iterative">
+                              <h3 class="text-center py-2">Iterative Methods</h3>
+                              <ul>
+                                    <li><code><span class="input">arrayName</span>.forEach()</code> iterates through each item of an array and applies an action (defined within the <code>()</code>) to it. When used with a function, this removes the need to write a <code>for</code> loop, as you can just use <code><span class="input">arrayName</span>.forEach(<span class="input">functionName</span>)</code> instead.</li>
+                                    <li><code><span class="input">arrayName</code>.map()</code> puts all items of an array into a new array (when used with a new array name). Again, when used with a function, it allows you to map out a new array with ease. e.g. <code>var newArray = oldArray.map(functionMultiply)</code>.</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="filtering">
+                              <h3 class="text-center py-2">Filtering Methods</h3>
+                              <ul>
+                                    <li><code>var <span class="input">filteredArray</span> = <span class="input">arrayName</span>.filter(<span class="input">functionName</span>)</code>, where the function is the filtering method - actions you apply to first array to get the second array. e.g.:
+                                          <div class="code block m-2">
+                                                <pre>var nums = [1, 20, 30, 3, 5, 8]</pre>
+                                                
+                                                <pre>function lessthan10(num) {</pre>
+                                                <pre>      return num &gt; 10</pre>
+                                                <pre>}</pre>
+                                                
+                                                <pre>var smallNums = nums.filter(lessthan10)</pre>
+                                          </div>
+                                    This would return 1, 3, 5 and 8.
+                                    </li>
+                                    <li>You can also find a single result. It works just like the filter method in that it needs a function to work off of, but once it has found a result that matches that condition, it will exit the loop. Its syntax is <code>var <span class="input">filteredArray</span> = <span class="input">arrayName</span>.find(<span class="input">functionName</span>)</code>.</li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+
+      <div class="container-fluid" id="es6nodejsnotes">
+            <h1 class="py-4 text-center">ES6 and Node.js</h1>
+            <div class="row justify-content-evenly">
+
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="nodebasics">
+                              <h3 class="text-center py-2">Node.js Basics</h3>
+                              <ul>
+                                    <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
+                                    <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
+                                    <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
+                                    <ul>
+                                          <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
+                                          <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
+                                    </ul>
+                                    <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
+                                    <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
+                                    <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="arrowfunctions">
+                              <h3 class="text-center py-2">Arrow Functions</h3>
+                              <ul>
+                                    <li>A <code>var <span class="input">functionName</span> = function(<span class="input">parameter1</span>, <span class="input">parameter2</span>){<span class="input">expressions</span>}</code> can be swapped with <code>var <span class="input">functionName</span> = (<span class="input">parameter1</span>, <span class="input">parameter2</span>) => {<span class="input">expressions</span>}</code>.</li>
+                                    <li>If there is only one input parameter the <code>()</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => {<span class="input">expressions</span>}</code>.</li>
+                                    <li>If there is only one expression inside the function, the <code>{}</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => <span class="input">expression</span></code>. If the purpose of the function is to just <code>return</code> a value, this can be taken one step further, and <code>return</code> can be removed altogther, e.g. <code>var multiplyNums = (a,b) => a*b</code> - here there is no need to type <code>return a*b</code>.</li>
+                                    <li>Arrow functions bind the <code>this</code> keyword to the object it's created inside of. As a result <strong>avoid using arrow functions for object methods</strong> and instead use a default function.</li>
+                                    <li>In regular functions the <code>this</code> keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions, the <code>this</code> keyword always represents the object that defined the arrow function.</li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="letconst">
+                              <h3 class="text-center py-2">"Let" & "Const"</h3>
+                              <ul>
+                                    <li>A commonly accepted practice is to use <code>const</code> as much as possible, and <code>let</code> in the case of loops and reassignment. Generally, <code>var</code> can be avoided outside of legacy code.</li>
+                                    <li><code>const</code> can be used for values which will not be reassigned. <code>var</code> would be for values that you do want to update at any point in the code.</li>
+                                    <li>If the <code>const</code> is an <strong>array</strong>, values can be pushed to it - it can be added onto, just not redefined. <code>const</code> means <strong>constant reference</strong>, not constant value.</li>
+                                    <li>Likewise, with <strong>objects</strong>, properties of the object can be redefined/updated - but the object itself cannot be redefined.</li>
+                                    <li>While arrays and objects defined with <code>const</code> can be <strong>modified</strong>, they cannot be <strong>reassigned</strong>.</li>
+                                    <li>Both <code>const</code> and <code>let</code> are always scoped to a block of code, they no longer exist outside of them.</li>
+                                    <li>As such, <code>let</code> will not leak outside of a loop or function.</li>
+                                    <li>An exception is that while using <code>while</code> loops, values created inside also exist outside of the loop.</li>
+                              </ul>
+                        </div>
+                  </div>
+
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                  </div>
+
+                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                        <div class="card my-2" id="title">
+                              <h3 class="text-center py-2">Title</h3>
+                              <ul>
+                                    <li></li>
+                              </ul>
+                        </div>
+                  </div>
+
+            </div>
+      </div>
+
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS plugin -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="./scripts.js"></script>
+</body>
+</html>

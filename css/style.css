@@ -1,0 +1,81 @@
+#backtotop{
+      position: fixed;
+      bottom:2vh;
+      right:2vh;
+}
+
+*{
+      font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+body{
+      user-select: none;
+      font-size: 0.8rem;
+}
+
+a{
+      text-decoration: none;
+      font-weight: bold;
+}
+
+h1{font-family: 'General Sans', sans-serif;}
+h3{
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 1.35rem;
+      margin: 5px 0;
+}
+
+.card{
+      scroll-margin-top: 6vh;
+      min-height: 100px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+/* ----------------------------- */
+
+code, .input{
+      user-select: all;
+      cursor: text;
+      display: inline!important;
+      font-family: 'Roboto Mono', monospace;
+}
+
+.input{
+      user-select: none;
+      cursor: default;
+      color: rgb(212, 198, 91);
+}
+
+/* ----------------------------- */
+
+.code.block{
+      user-select: all;
+      cursor: text;
+      /* background-color: rgba(211, 211, 211, 0.1); */
+      padding: 10px;
+      border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+      border-radius: var(--bs-border-radius);
+}
+
+.code pre{
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.875em;
+      color: var(--bs-code-color);
+      margin: 0;
+}
+
+.code .input{
+      cursor: default;
+      user-select: none;
+      /* font-size: 0.875em; */
+}
+
+.code .comment{
+      cursor: default;
+      user-select: none;
+      font-size: 0.875em;
+      font-family: 'Roboto Mono', monospace;
+      color: rgb(165, 165, 165);
+      text-wrap: wrap;
+}
+
