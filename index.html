@@ -479,157 +479,157 @@
    </div>
 
    <div class="container-fluid" id="es6nodejsnotes">
-         <h1 class="py-4 text-center">ES6 and Node.js</h1>
-         <div class="row justify-content-evenly">
+      <h1 class="py-4 text-center">ES6 and Node.js</h1>
+      <div class="row justify-content-evenly">
 
-               <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-                  <div class="card my-2" id="arrowfunctions">
-                     <h3 class="text-center py-2">Arrow Functions</h3>
-                     <ul>
-                        <li>A <code>var <span class="input">functionName</span> = function(<span class="input">parameter1</span>, <span class="input">parameter2</span>){<span class="input">expressions</span>}</code> can be swapped with <code>var <span class="input">functionName</span> = (<span class="input">parameter1</span>, <span class="input">parameter2</span>) => {<span class="input">expressions</span>}</code>.</li>
-                        <li>If there is only one input parameter the <code>()</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => {<span class="input">expressions</span>}</code>.</li>
-                        <li>If there is only one expression inside the function, the <code>{}</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => <span class="input">expression</span></code>. If the purpose of the function is to just <code>return</code> a value, this can be taken one step further, and <code>return</code> can be removed altogther, e.g. <code>var multiplyNums = (a,b) => a*b</code> - here there is no need to type <code>return a*b</code>.</li>
-                        <li>Arrow functions bind the <code>this</code> keyword to the object it's created inside of. As a result <strong>avoid using arrow functions for object methods</strong> and instead use a default function.</li>
-                        <li>In regular functions the <code>this</code> keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions, the <code>this</code> keyword always represents the object that defined the arrow function.</li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="letconst">
-                     <h3 class="text-center py-2">"Let" & "Const"</h3>
-                     <ul>
-                        <li>A commonly accepted practice is to use <code>const</code> as much as possible, and <code>let</code> in the case of loops and reassignment. Generally, <code>var</code> can be avoided outside of legacy code.</li>
-                        <li><code>const</code> can be used for values which will not be reassigned. <code>var</code> would be for values that you do want to update at any point in the code.</li>
-                        <li>If the <code>const</code> is an <strong>array</strong>, values can be pushed to it - it can be added onto, just not redefined. <code>const</code> means <strong>constant reference</strong>, not constant value.</li>
-                        <li>Likewise, with <strong>objects</strong>, properties of the object can be redefined/updated - but the object itself cannot be redefined.</li>
-                        <li>While arrays and objects defined with <code>const</code> can be <strong>modified</strong>, they cannot be <strong>reassigned</strong>.</li>
-                        <li>Both <code>const</code> and <code>let</code> are always scoped to a block of code, they no longer exist outside of them.</li>
-                        <li>As such, <code>let</code> will not leak outside of a loop or function.</li>
-                        <li>An exception is that while using <code>while</code> loops, values created inside also exist outside of the loop.</li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="functionalloops">
-                     <h3 class="text-center py-2">Functional Loops</h3>
-                     <ul>
-                        <li>The <code>.foreach()</code> loop is a functional way of iterating through an array without using a <code>for</code> loop, its syntax is <code><span class="input">arrayName</span>.foreach((<span class="input">input element</span>) => <span class="input">expression</span>)</code>.</li>
-                        <li><code>.filter()</code> returns a new array based on the filter options. e.g. <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.filter((<span class="input">input element</span>) => <span class="input">expression</span>)</code>. e.g.: 
-                           <div class="code block m-2">
-                              <pre>const moviePatrons = [</pre>
-                              <pre>      { name: "Tom", age: 16 },</pre>
-                              <pre>      { name: "Ashley", age: 31 },</pre>
-                              <pre>      { name: "Sarah", age: 18 },</pre>
-                              <pre>      { name: "Alvin", age: 22 },</pre>
-                              <pre>      { name: "Cherie", age: 14 },</pre>
-                              <pre>      { name: "Malcolm", age: 15 }</pre>
-                              <pre>];</pre>
-                              <br>
-                              <pre>const canWatchRatedR = moviePatrons.filter((patron) => patron.age > 17);</pre>
-                           </div>
-                        </li>
-                        <li>The other functional loop is <code>.map()</code> which returns a brand new array by applying actions to all the elements of a previous array. It's syntax is <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.map((<span class="input">input element</span>) => <span class="input">expression</span>)</code> It differs from <code>foreach</code> as it creates a <strong>new</strong> array with the new values, rather than affecting the original array. e.g.:
-                           <div class="code block m-2">
-                              <pre>const array1 = [1, 4, 9, 16];</pre>
-                              <pre>const array2 = array1.map((number) => number*2);</pre>
-                              <br>
-                              <pre>console.log(array1);</pre>
-                              <span class="comment">// This would return Array [1, 4, 9, 16]</span>
-                              <pre>console.log(array2);</pre>
-                              <span class="comment">// This would return Array [2, 8, 18, 32]</span>
-                           </div>
-                        </li> 
-                     </ul>
-                  </div>
-               </div>
-
-               <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-                  <div class="card my-2" id="nodebasics">
-                     <h3 class="text-center py-2">Node.js Basics</h3>
-                     <ul>
-                        <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
-                        <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
-                        <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
-                        <ul>
-                              <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
-                              <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
-                        </ul>
-                        <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
-                        <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
-                        <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
-                        <li>Running <code>console.log(process.argv);</code> returns an array of command line arguments. Those items can be accessed via index number, e.g. <code>console.log(process.argv[<span class="input">2</span>])</code>. This just allows you to get inputs from what is entered into the command line, if you wanted to use that in the code (for example to verify user input).</li>
-                        <li id="ternaryop">JavaScript also has a ternary operator <code>?</code> which takes in three parameters: <code><span class="input">condition</span> ? <span class="input">expression if condition is true</span> : <span class="input">expression if condition is false</span></code>, e.g. <code>console.log(1 == 1 ? "True" : "False")</code> would print <code>True</code>.</li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="nodefs">
-                     <h3 class="text-center py-2">Node File System</h3>
-                     <ul>
-                        <li><code>fs</code> is a Node standard library package for reading and writing files. Putting <code>const fs = require("fs");</code> in the JS file adds it.</li>
-                        <li>To read the contents of a file and manipulate the data you can use the following lines of code. The <code>.readFile("<span class="input">filename</span>", "<span class="input">encoding</span>", (error, data) => <span class="input">...</span>)</code> allows you to use an if-else statement or a ternary operator to print either the error or the data, in the following example:
-                           <div class="code block m-2">
-                              <pre>fs.readFile('data.csv', 'utf8', (error, data) =></pre>
-                              <pre>  error ? console.error(error) : console.log(data)</pre>
-                              <pre>);</pre>
-                           </div>
-                        </li>
-                        <li><code>"utf8"</code> encodes the raw buffer data in human-readable format.
-                        </li>
-                        <li>Likewise, using <code>.writeFile("<span class="input">filename</span>", "<span class="input">input</span>", (error) => <span class="input">...</span>)</code> allows you to write data to a file. The full syntax is:
-                           <div class="code block m-2">
-                              <pre>fs.writeFile('log.txt', process.argv[2], (error) =></pre>
-                              <pre>  error ? console.error(err) : console.log('Success!')</pre>
-                              <pre>);</pre>
-                           </div>
-                        </li>
-                        <li>N.B. In the above examples the <code>error ? ...</code> line is using the <a href="#ternaryop">ternary operator</a>.</li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="modularisation">
-                     <h3 class="text-center py-2">Modularisation</h3>
-                     <ul>
-                        <li>Modularisation is the idea that code can be split into segments based on its functionality to make it more readable and easier to troubleshoot.</li>
-                        <li><code>module.exports</code> is an object we use to store variables or methods that other JS files can access. There can only be <strong>one</strong> of thse per JS file. Its syntax is:
-                           <div class="code block m-2">
-                              <pre>module.exports = {</pre>
-                              <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
-                              <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
-                              <pre>};</pre>
-                           </div>
-                        </li>
-                        <li>Likewise, to get the exports from one file, you need to <code>require("<span class="input">filepath</span>")</code> in the other to receive them. This sets the variables/methods you exported into a custom variable in this new JS file, e.g.:
-                           <div class="code block m-2">
-                              <pre>const <span class="input">objectName</span> = require("<span class="input">filepath</span>");</pre>
-                           </div>
-                        </li>
-                        <li>These "imports" can then be called in the regular way of accessing an object's properties/methods.</li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="title">
-                     <h3 class="text-center py-2">Title</h3>
-                     <ul>
-                        <li></li>
-                     </ul>
-                  </div>
-               </div>
-
-               <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-                  <div class="card my-2" id="title">
-                     <h3 class="text-center py-2">Title</h3>
-                     <ul>
-                        <li></li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="title">
-                     <h3 class="text-center py-2">Title</h3>
-                     <ul>
-                        <li></li>
-                     </ul>
-                  </div>
-                  <div class="card my-2" id="title">
-                     <h3 class="text-center py-2">Title</h3>
-                     <ul>
-                        <li></li>
-                     </ul>
-                  </div>
-               </div>
-
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="arrowfunctions">
+               <h3 class="text-center py-2">Arrow Functions</h3>
+               <ul>
+                  <li>A <code>var <span class="input">functionName</span> = function(<span class="input">parameter1</span>, <span class="input">parameter2</span>){<span class="input">expressions</span>}</code> can be swapped with <code>var <span class="input">functionName</span> = (<span class="input">parameter1</span>, <span class="input">parameter2</span>) => {<span class="input">expressions</span>}</code>.</li>
+                  <li>If there is only one input parameter the <code>()</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => {<span class="input">expressions</span>}</code>.</li>
+                  <li>If there is only one expression inside the function, the <code>{}</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => <span class="input">expression</span></code>. If the purpose of the function is to just <code>return</code> a value, this can be taken one step further, and <code>return</code> can be removed altogther, e.g. <code>var multiplyNums = (a,b) => a*b</code> - here there is no need to type <code>return a*b</code>.</li>
+                  <li>Arrow functions bind the <code>this</code> keyword to the object it's created inside of. As a result <strong>avoid using arrow functions for object methods</strong> and instead use a default function.</li>
+                  <li>In regular functions the <code>this</code> keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions, the <code>this</code> keyword always represents the object that defined the arrow function.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="letconst">
+               <h3 class="text-center py-2">"Let" & "Const"</h3>
+               <ul>
+                  <li>A commonly accepted practice is to use <code>const</code> as much as possible, and <code>let</code> in the case of loops and reassignment. Generally, <code>var</code> can be avoided outside of legacy code.</li>
+                  <li><code>const</code> can be used for values which will not be reassigned. <code>var</code> would be for values that you do want to update at any point in the code.</li>
+                  <li>If the <code>const</code> is an <strong>array</strong>, values can be pushed to it - it can be added onto, just not redefined. <code>const</code> means <strong>constant reference</strong>, not constant value.</li>
+                  <li>Likewise, with <strong>objects</strong>, properties of the object can be redefined/updated - but the object itself cannot be redefined.</li>
+                  <li>While arrays and objects defined with <code>const</code> can be <strong>modified</strong>, they cannot be <strong>reassigned</strong>.</li>
+                  <li>Both <code>const</code> and <code>let</code> are always scoped to a block of code, they no longer exist outside of them.</li>
+                  <li>As such, <code>let</code> will not leak outside of a loop or function.</li>
+                  <li>An exception is that while using <code>while</code> loops, values created inside also exist outside of the loop.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="functionalloops">
+               <h3 class="text-center py-2">Functional Loops</h3>
+               <ul>
+                  <li>The <code>.foreach()</code> loop is a functional way of iterating through an array without using a <code>for</code> loop, its syntax is <code><span class="input">arrayName</span>.foreach((<span class="input">input element</span>) => <span class="input">expression</span>)</code>.</li>
+                  <li><code>.filter()</code> returns a new array based on the filter options. e.g. <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.filter((<span class="input">input element</span>) => <span class="input">expression</span>)</code>. e.g.: 
+                     <div class="code block m-2">
+                        <pre>const moviePatrons = [</pre>
+                        <pre>      { name: "Tom", age: 16 },</pre>
+                        <pre>      { name: "Ashley", age: 31 },</pre>
+                        <pre>      { name: "Sarah", age: 18 },</pre>
+                        <pre>      { name: "Alvin", age: 22 },</pre>
+                        <pre>      { name: "Cherie", age: 14 },</pre>
+                        <pre>      { name: "Malcolm", age: 15 }</pre>
+                        <pre>];</pre>
+                        <br>
+                        <pre>const canWatchRatedR = moviePatrons.filter((patron) => patron.age > 17);</pre>
+                     </div>
+                  </li>
+                  <li>The other functional loop is <code>.map()</code> which returns a brand new array by applying actions to all the elements of a previous array. It's syntax is <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.map((<span class="input">input element</span>) => <span class="input">expression</span>)</code> It differs from <code>foreach</code> as it creates a <strong>new</strong> array with the new values, rather than affecting the original array. e.g.:
+                     <div class="code block m-2">
+                        <pre>const array1 = [1, 4, 9, 16];</pre>
+                        <pre>const array2 = array1.map((number) => number*2);</pre>
+                        <br>
+                        <pre>console.log(array1);</pre>
+                        <span class="comment">// This would return Array [1, 4, 9, 16]</span>
+                        <pre>console.log(array2);</pre>
+                        <span class="comment">// This would return Array [2, 8, 18, 32]</span>
+                     </div>
+                  </li> 
+               </ul>
+            </div>
          </div>
+
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="nodebasics">
+               <h3 class="text-center py-2">Node.js Basics</h3>
+               <ul>
+                  <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
+                  <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
+                  <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
+                  <ul>
+                        <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
+                        <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
+                  </ul>
+                  <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
+                  <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
+                  <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
+                  <li>Running <code>console.log(process.argv);</code> returns an array of command line arguments. Those items can be accessed via index number, e.g. <code>console.log(process.argv[<span class="input">2</span>])</code>. This just allows you to get inputs from what is entered into the command line, if you wanted to use that in the code (for example to verify user input).</li>
+                  <li id="ternaryop">JavaScript also has a ternary operator <code>?</code> which takes in three parameters: <code><span class="input">condition</span> ? <span class="input">expression if condition is true</span> : <span class="input">expression if condition is false</span></code>, e.g. <code>console.log(1 == 1 ? "True" : "False")</code> would print <code>True</code>.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="nodefs">
+               <h3 class="text-center py-2">Node File System</h3>
+               <ul>
+                  <li><code>fs</code> is a Node standard library package for reading and writing files. Putting <code>const fs = require("fs");</code> in the JS file adds it.</li>
+                  <li>To read the contents of a file and manipulate the data you can use the following lines of code. The <code>.readFile("<span class="input">filename</span>", "<span class="input">encoding</span>", (error, data) => <span class="input">...</span>)</code> allows you to use an if-else statement or a ternary operator to print either the error or the data, in the following example:
+                     <div class="code block m-2">
+                        <pre>fs.readFile('data.csv', 'utf8', (error, data) =></pre>
+                        <pre>  error ? console.error(error) : console.log(data)</pre>
+                        <pre>);</pre>
+                     </div>
+                  </li>
+                  <li><code>"utf8"</code> encodes the raw buffer data in human-readable format.
+                  </li>
+                  <li>Likewise, using <code>.writeFile("<span class="input">filename</span>", "<span class="input">input</span>", (error) => <span class="input">...</span>)</code> allows you to write data to a file. The full syntax is:
+                     <div class="code block m-2">
+                        <pre>fs.writeFile('log.txt', process.argv[2], (error) =></pre>
+                        <pre>  error ? console.error(err) : console.log('Success!')</pre>
+                        <pre>);</pre>
+                     </div>
+                  </li>
+                  <li>N.B. In the above examples the <code>error ? ...</code> line is using the <a href="#ternaryop">ternary operator</a>.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="modularisation">
+               <h3 class="text-center py-2">Modularisation</h3>
+               <ul>
+                  <li>Modularisation is the idea that code can be split into segments based on its functionality to make it more readable and easier to troubleshoot.</li>
+                  <li><code>module.exports</code> is an object we use to store variables or methods that other JS files can access. There can only be <strong>one</strong> of thse per JS file. Its syntax is:
+                     <div class="code block m-2">
+                        <pre>module.exports = {</pre>
+                        <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
+                        <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
+                        <pre>};</pre>
+                     </div>
+                  </li>
+                  <li>Likewise, to get the exports from one file, you need to <code>require("<span class="input">filepath</span>")</code> in the other to receive them. This sets the variables/methods you exported into a custom variable in this new JS file, e.g.:
+                     <div class="code block m-2">
+                        <pre>const <span class="input">objectName</span> = require("<span class="input">filepath</span>");</pre>
+                     </div>
+                  </li>
+                  <li>These "imports" can then be called in the regular way of accessing an object's properties/methods.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
    </div>
 
    <!-- jQuery -->
