@@ -22,7 +22,6 @@
       <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
    <nav class="navbar navbar-expand bg-body-tertiary sticky-top rounded-top-0 rounded">
       <div class="container-fluid">
          <a class="navbar-brand" href="#">Web Development Notes</a>
@@ -168,22 +167,22 @@
                   <li>Arrays and objects can nest inside of one another depending on what makes sense in the context, e.g.:
                      <div class="code block m-2">
                         <pre>var bankAccount = {</pre>
-                        <pre>      user: {</pre>
-                        <pre>            firstName: "Name",</pre>
-                        <pre>            lastName: "Surname",</pre>
-                        <pre>            address: {</pre>
-                        <pre>                  houseNumber: "house number",</pre>
-                        <pre>                  city: "city name",</pre>
-                        <pre>                  postcode: "postcode",</pre>
-                        <pre>                  nearestBranch: ["branch1", "branch2", "branch3"]</pre>
-                        <pre>            }</pre>
-                        <pre>      }</pre>
-                        <pre>      balance:{</pre>
-                        <pre>            primary: 10000,</pre>
-                        <pre>            savings: 12093,</pre>
-                        <pre>            investmentISA: 1023102</pre>
-                        <pre>      }</pre>
-                        <pre>}</pre>
+                        <br><pre>      user: {</pre>
+                        <br><pre>            firstName: "Name",</pre>
+                        <br><pre>            lastName: "Surname",</pre>
+                        <br><pre>            address: {</pre>
+                        <br><pre>                  houseNumber: "house number",</pre>
+                        <br><pre>                  city: "city name",</pre>
+                        <br><pre>                  postcode: "postcode",</pre>
+                        <br><pre>                  nearestBranch: ["branch1", "branch2", "branch3"]</pre>
+                        <br><pre>            }</pre>
+                        <br><pre>      }</pre>
+                        <br><pre>      balance:{</pre>
+                        <br><pre>            primary: 10000,</pre>
+                        <br><pre>            savings: 12093,</pre>
+                        <br><pre>            investmentISA: 1023102</pre>
+                        <br><pre>      }</pre>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                   <li>You can access nested objects in the same way as objects: i.e. the <code>.keyName</code> or <code>[keyName]</code>; and you can access arrays in the same way too: <code>arrayName[i]</code>.</li>
@@ -208,7 +207,6 @@
                </ul>
             </div>
          </div>
-
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="condstatements">
                <h3 class="text-center py-2">Conditional Statements</h3>
@@ -216,36 +214,36 @@
                   <li>Conditional statements (a.k.a. "if" statements) are formatted like this:
                      <div class="code block m-2">
                         <pre>if (<span class="input">condition</span>) {</pre>
-                        <pre>       <span class="input">code to run if condition is true</span></pre>
-                        <pre>}</pre>
+                        <br><pre>       <span class="input">code to run if condition is true</span></pre>
+                        <br><pre>}</pre>
                      </div>
                      e.g. 
                      <div class="code block m-2">
                         <pre>if (hungerLevel &lt;= 20){</pre>
-                        <pre>      console.log("I'm hungry!")</pre>
-                        <pre>}</pre>
+                        <br><pre>      console.log("I'm hungry!")</pre>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                   <li>It's often helpful to have an "else" statement as well:
                      <div class="code block m-2">
                         <pre>if (hungerLevel &lt;= 20){</pre>
-                        <pre>      console.log("I'm hungry!")</pre>
-                        <pre>} else {</pre>
-                        <pre>      console.log("I'm full.")</pre>
-                        <pre>}</pre>
+                        <br><pre>      console.log("I'm hungry!")</pre>
+                        <br><pre>} else {</pre>
+                        <br><pre>      console.log("I'm full.")</pre>
+                        <br><pre>}</pre>
                      </div>
                      Likewise you can have an else-if statement which allows for checking more than 1 condition:
                      <div class="code block m-2">
-                           <pre>if (<span class="input">condition1</span>){</pre>
-                           <pre>      <span class="input">code to run if condition1 is true</span></pre>
-                           <pre>} else if (<span class="input">condition2</span>) {</pre>
-                           <pre>      <span class="input">code to run if condition2 is true</span></pre>
-                           <pre>} else if (<span class="input">condition3</span>) {</pre>
-                           <pre>      <span class="input">code to run if condition3 is true</span></pre>
-                           <span class="comment">// Repeat as necessary... You can also include an "else" at the end as in a normal if statement too.</span>
-                           <pre>} else {</pre>
-                           <pre>      <span class="input">code to run if no conditions are met</span></pre>
-                           <pre>} </pre>
+                        <pre>if (<span class="input">condition1</span>){</pre>
+                        <br><pre>      <span class="input">code to run if condition1 is true</span></pre>
+                        <br><pre>} else if (<span class="input">condition2</span>) {</pre>
+                        <br><pre>      <span class="input">code to run if condition2 is true</span></pre>
+                        <br><pre>} else if (<span class="input">condition3</span>) {</pre>
+                        <br><pre>      <span class="input">code to run if condition3 is true</span></pre>
+                        <br><span class="comment">// Repeat as necessary... You can also include an "else" at the end as in a normal if statement too.</span>
+                        <br><pre>} else {</pre>
+                        <br><pre>      <span class="input">code to run if no conditions are met</span></pre>
+                        <br><pre>} </pre>
                      </div>
                   </li>
                </ul>
@@ -258,25 +256,25 @@
                   <li>The syntax is as below:
                      <div class="code block m-2">
                         <pre>switch (<span class="input">variableName</span>) {</pre>
-                        <pre>      case <span class="input">value1</span>:</pre>  
-                        <pre>      <span class="input">code to run if the variable is value1</span>;</pre>
-                        <pre>      break;</pre>
-                        <pre>      case <span class="input">value2</span>:</pre>  
-                        <pre>      <span class="input">code to run if the variable is value2</span>;</pre>
-                        <pre>      break;</pre>
-                        <span class="comment">// Repeat as necessary...</span>
-                        <pre>}</pre>
+                        <br><pre>      case <span class="input">value1</span>:</pre>  
+                        <br><pre>      <span class="input">code to run if the variable is value1</span>;</pre>
+                        <br><pre>      break;</pre>
+                        <br><pre>      case <span class="input">value2</span>:</pre>  
+                        <br><pre>      <span class="input">code to run if the variable is value2</span>;</pre>
+                        <br><pre>      break;</pre>
+                        <br><span class="comment">// Repeat as necessary...</span>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                   <li>To include what would be the "else" part to the above "else-if" alternative, you just add a <code>default</code> case to the code block. This will return only if no other conditions are met in the switch statement.
                   <div class="code block m-2">
                      <span class="comment">      ...</span> 
-                     <pre>      <span class="input">code to run if the variable is value2</span>;</pre>
-                     <pre>      break;</pre>
-                     <span class="comment">// Repeat as necessary...</span>
-                     <pre>      default:</pre>
-                     <pre>      <span class="input">code to run if the variable is not any of the cases above</span></pre>
-                     <pre>}</pre>
+                     <br><pre>      <span class="input">code to run if the variable is value2</span>;</pre>
+                     <br><pre>      break;</pre>
+                     <br><span class="comment">// Repeat as necessary...</span>
+                     <br><pre>      default:</pre>
+                     <br><pre>      <span class="input">code to run if the variable is not any of the cases above</span></pre>
+                     <br><pre>}</pre>
                   </div></li>
                </ul>
             </div>
@@ -286,8 +284,8 @@
                   <li>Iterative loops (a.k.a. "for" loops) are formatted like this:
                      <div class="code block m-2">
                         <pre>for (<span class="input">expression 1</span>; <span class="input">expression 2</span>; <span class="input">expression 3</span>) {</pre>
-                        <pre>       continue here</pre>
-                        <pre>}</pre>
+                        <br><pre>       continue here</pre>
+                        <br><pre>}</pre>
                      </div>
                      <ul>
                         <li>Expression 1 is executed (one time) before the execution of the code block. It is used to initialise the for loop, i.e. set the starting variables. You can use multiple values here, seperated by commas.</li>
@@ -297,8 +295,8 @@
                      e.g. 
                      <div class="code block m-2">
                         <pre>for (var i = 0; i &lt;= 20; i++){</pre>
-                        <pre>      console.log("i is less than or equal to 20.")</pre>
-                        <pre>}</pre>
+                        <br><pre>      console.log("i is less than or equal to 20.")</pre>
+                        <br><pre>}</pre>
                      </div>
                      In this example, the <code>i</code> in the iterator is just a variable, it starts at 0 (or the first item in an array). The stopping condition is when i is strictly greater than 20 (i.e. the for loop will run as long as i is less than or equal to 20), and the means of increasing the iterator is <code>i++</code> which is shorthand for <code>i = i + 1</code>. This way every time the for loop runs, <code>i</code> becomes closer and closer to meeting the stopping condition.
                   </li>
@@ -307,18 +305,18 @@
                         <li> e.g. 
                            <div class="code block m-2">
                               <pre>var i = 3</pre>
-                              <pre>for (var i = 0; i &lt;= 20; i++){</pre>
-                              <pre>      console.log("i is less than or equal to 20.")</pre>
-                              <pre>}</pre>
+                              <br><pre>for (var i = 0; i &lt;= 20; i++){</pre>
+                              <br><pre>      console.log("i is less than or equal to 20.")</pre>
+                              <br><pre>}</pre>
                            </div>
                            In this example, the variable <code>i</code> would be 20 after the loop, as it was redefined as 0, then for as long as <code>i</code> was less than or equal to 20, it kept increasing by 1, until it reached 20 and the loop stopped.
                         </li>
                         <li> e.g. 
                            <div class="code block m-2">
                               <pre>var i = 7</pre>
-                              <pre>for (let i = 0; i &lt;= 20; i++){</pre>
-                              <pre>      console.log("i is less than or equal to 20.")</pre>
-                              <pre>}</pre>
+                              <br><pre>for (let i = 0; i &lt;= 20; i++){</pre>
+                              <br><pre>      console.log("i is less than or equal to 20.")</pre>
+                              <br><pre>}</pre>
                            </div>
                            In this example, the variable <code>i</code> remains 7, even though it was redefined as 0 and increased to 20 - those actions happened only inside the for loop.
                         </li>
@@ -327,25 +325,24 @@
                   <li>You can combine iterations with an array to apply an action to all items in an array:
                      <div class="code block m-2">
                         <pre>var <span class="input">arrayName</span> = ["<span class="input">item0</span>", "<span class="input">item1</span>", "<span class="input">item2</span>", "<span class="input">item3</span>"];</pre>
-                        <pre>for (var i = 0; i &lt; <span class="input">array length</span>; i++){</pre>
-                        <pre>      <span class="input">action to apply to each array item</span></pre>
-                        <pre>}</pre>
+                        <br><pre>for (var i = 0; i &lt; <span class="input">array length</span>; i++){</pre>
+                        <br><pre>      <span class="input">action to apply to each array item</span></pre>
+                        <br><pre>}</pre>
                      </div>
                      e.g.
                      <div class="code block m-2">
                         <pre>var animals = ["chicken", "duck", "cat", "shark"];</pre>
-                        <pre>for (var i = 0; i &lt; 4; i++){</pre>
-                        <pre>      var currentAnimal = animals[i];</pre>
+                        <br><pre>for (var i = 0; i &lt; 4; i++){</pre>
+                        <br><pre>      var currentAnimal = animals[i];</pre>
                         <span class="comment">// This sets the current array item as a variable so we can manipulate it easier.</span>
-                        <pre>      console.log(currentAnimal + "s")</pre>
+                        <br><pre>      console.log(currentAnimal + "s")</pre>
                         <span class="comment">// This will print the current animal with an "s" appended, to make it the plural form of the word.</span>
-                        <pre>}</pre>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                </ul>
             </div>
          </div>
-
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="functions">
                <h3 class="text-center py-2">Functions</h3>
@@ -355,17 +352,17 @@
                      To call the function, you use <code><span class="input">functionName</span>(<span class="input">functionInput</span>)</code>. e.g.:
                      <div class="code block m-2">
                         <pre>var fruitsA = ["pears", "apples", "oranges"]</pre>
-                        <pre>var fruitsB = ["pineapple", "peach", "mango"]</pre>
-                        
-                        <pre>function listFruits (arr) {</pre> 
-                              <span class="comment">//"arr" is just a random name to indicate we intend to use this function on arrays. Some value must be used here though, as the function is being used on arrays.</span>
-                        <pre>      for (let i = 0; i &lt; arr.length; i++) {</pre>
-                        <pre>            console.log(arr[i])</pre>
-                        <pre>      }</pre>
-                        <pre>}</pre>
-                        
-                        <pre>listFruits(fruitsA)</pre>
-                        <pre>listFruits(fruitsB)</pre>
+                        <br><pre>var fruitsB = ["pineapple", "peach", "mango"]</pre>
+                        <br>
+                        <br><pre>function listFruits (arr) {</pre> 
+                        <br><span class="comment">//"arr" is just a random name to indicate we intend to use this function on arrays. Some value must be used here though, as the function is being used on arrays.</span>
+                        <br><pre>      for (let i = 0; i &lt; arr.length; i++) {</pre>
+                        <br><pre>            console.log(arr[i])</pre>
+                        <br><pre>      }</pre>
+                        <br><pre>}</pre>
+                        <br>
+                        <br><pre>listFruits(fruitsA)</pre>
+                        <br><pre>listFruits(fruitsB)</pre>
                      </div>
                      This lets us list out all of the values of both arrays, without making a separate "for" loop for each array.
                   </li>
@@ -385,12 +382,12 @@
                   <li>The object can store different data types, e.g.:
                      <div class="code block m-2">
                         <pre>var planet = {</pre>
-                        <pre>      name: "Earth",</pre>
-                        <pre>      age: "4.543 billion years",</pre>
-                        <pre>      moons: 1,</pre>
-                        <pre>      isPopulated: true,</pre>
-                        <pre>      population: "8.045 billion",</pre>
-                        <pre>}</pre>
+                        <br><pre>      name: "Earth",</pre>
+                        <br><pre>      age: "4.543 billion years",</pre>
+                        <br><pre>      moons: 1,</pre>
+                        <br><pre>      isPopulated: true,</pre>
+                        <br><pre>      population: "8.045 billion",</pre>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                   <li>To reference a particular item within an object, you would use <code><span class="input">objectName</span>.<span class="input">keyName</span></code> or <code><span class="input">objectName</span>[<span class="input">"key Name"</span>]</code>, if the keyname is a string. You can use the <code>[]</code> method for regular key names too, but you can't use strings with the <code>.</code> method.</li>
@@ -399,16 +396,16 @@
                   <li>Converting these into arrays can then let us iterate through them with ease. For example, if I had a menu as below and wanted to find the total cost of all items, I could do something similar to this:
                      <div class="code block m-2">                                                  
                         <pre>var prices = Object.values(menu);</pre>
-                        <pre>console.log(prices);</pre>
-                        
-                        <pre>var totalprice = 0.00;</pre>
-                        
-                        <pre>for (let i = 0; i &lt; prices.length; i++) {</pre>
-                        <pre>      const price = prices[i];</pre>
-                        <pre>      totalprice += price;</pre>
-                        <pre>}</pre>
-                        
-                        <pre>console.log(`The total price for all items is £${totalprice}`)</pre>
+                        <br><pre>console.log(prices);</pre>
+                        <br>
+                        <br><pre>var totalprice = 0.00;</pre>
+                        <br>
+                        <br><pre>for (let i = 0; i &lt; prices.length; i++) {</pre>
+                        <br><pre>      const price = prices[i];</pre>
+                        <br><pre>      totalprice += price;</pre>
+                        <br><pre>}</pre>
+                        <br>
+                        <br><pre>console.log(`The total price for all items is £${totalprice}`)</pre>
                      </div>
                   </li>
                </ul>
@@ -419,14 +416,14 @@
                   <li>Objects can store more than primitive data types. Objects can embed functions into them as the value of a key-value pair. It can then be referenced the same way you would reference a key: <code><span class="input">objectName</span>.<span class="input">keyName</span>()</code> BUT you must add <code>()</code> afterwards.
                      <div class="code block m-2">
                         <pre>var person = {</pre>
-                        <pre>      name: "myName",</pre>
-                        <pre>      age: 21,</pre>
-                        <pre>      tellFunFact: function () {</pre>
-                        <pre>            console.log(`My favourite number is ${1+2}`)</pre>
-                        <pre>      }</pre>
-                        <pre>}</pre>
+                        <br><pre>      name: "myName",</pre>
+                        <br><pre>      age: 21,</pre>
+                        <br><pre>      tellFunFact: function () {</pre>
+                        <br><pre>            console.log(`My favourite number is ${1+2}`)</pre>
+                        <br><pre>      }</pre>
+                        <br><pre>}</pre>
                         <br>
-                        <pre>person.tellFunFact()</pre>
+                        <br><pre>person.tellFunFact()</pre>
                      </div>
                      This would show "My favourite number is 3" in the console.
                   </li>
@@ -435,15 +432,15 @@
                         <li>The <code>this</code> keyword can more usefully be used inside our objects/methods though. It'll refer to the object it is contained inside.</li>
                            <div class="code block m-2">
                               <pre>var user = {</pre>
-                              <pre>      name: "J",</pre>
-                              <pre>      surname: "G",</pre>
-                              <pre>      age: 21,</pre>
-                              <pre>      displayUser: function() {</pre>
-                              <pre>            console.log(`The user is ${this.name} ${this.surname} and they are ${this.age} years old.`)</pre>
-                              <pre>      }</pre>
-                              <pre>}</pre>
+                              <br><pre>      name: "J",</pre>
+                              <br><pre>      surname: "G",</pre>
+                              <br><pre>      age: 21,</pre>
+                              <br><pre>      displayUser: function() {</pre>
+                              <br><pre>            console.log(`The user is ${this.name} ${this.surname} and they are ${this.age} years old.`)</pre>
+                              <br><pre>      }</pre>
+                              <br><pre>}</pre>
                               <br>
-                              <pre>user.displayUser()</pre>
+                              <br><pre>user.displayUser()</pre>
                            </div>
                         <li>The above example would display all the other values in a console log of <code>The user is J G and they are 21 years old</code>, despite the method itself being inside the object.</li>
                      </ul>
@@ -483,12 +480,12 @@
                   <li><code>var <span class="input">filteredArray</span> = <span class="input">arrayName</span>.filter(<span class="input">functionName</span>)</code>, where the function is the filtering method - actions you apply to first array to get the second array. e.g.:
                      <div class="code block m-2">
                         <pre>var nums = [1, 20, 30, 3, 5, 8]</pre>
-                        
-                        <pre>function lessthan10(num) {</pre>
-                        <pre>      return num &gt; 10</pre>
-                        <pre>}</pre>
-                        
-                        <pre>var smallNums = nums.filter(lessthan10)</pre>
+                        <br>
+                        <br><pre>function lessthan10(num) {</pre>
+                        <br><pre>      return num &gt; 10</pre>
+                        <br><pre>}</pre>
+                        <br>
+                        <br><pre>var smallNums = nums.filter(lessthan10)</pre>
                      </div>
                      This would return 1, 3, 5 and 8.
                   </li>
@@ -539,26 +536,25 @@
                      
                      <div class="code block m-2">
                         <pre>var textbox = document.querySelector("#setattribute > ul > li:nth-child(1)")</pre>
-                        <span class="comment">// This defines a variable and assigns it the appropriate document object.</span>
-                        <pre>textbox.style.color = "red"</pre>
-                        <pre>textbox.style.fontFamily = "monospace"</pre>
-                        <span class="comment">//This sets the font color to red, and the font to "Cabinet Grotesk".</span>
+                        <br><span class="comment">// This defines a variable and assigns it the appropriate document object.</span>
+                        <br><pre>textbox.style.color = "red"</pre>
+                        <br><pre>textbox.style.fontFamily = "monospace"</pre>
+                        <br><span class="comment">//This sets the font color to red, and the font to "Cabinet Grotesk".</span>
                      </div>
                   </li>
                   <li>If you want to change multiple attributes at once, instead of typing out <code>.style.<span class="input">attribute</span></code> for each attribute, you can use <code>.setAttribute("<span class="input">attributeName</span>", "<span class="input">attributeValue(s)</span>")</code>e.g. <code>document.querySelector("#customClass").setAttribute("style","color: yellow; font-size: 0.85rem; text-decoration: underline;")</code> would set the first element with the class <code>customClass</code> with the style attributes listed above. 
-                     <br>
-                     <span class="comment">NB. This could be re-written much neater with convenience variables, indentation, etc.</span>
+                     <br><span class="comment">NB. This could be re-written much neater with convenience variables, indentation, etc.</span>
                   </li>
                   <li>Combined with for loops and the <code>document.querySelectorAll()</code> (which generates an array of all elements that match the requirements), you can adjust multiple things quickly:
                      <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="changeallLI(listEls)">Demo code</button>
                      <button type="button" class="btn btn-danger btn-sm me-2" onclick="undochangeallLI(listEls)">Revert</button>
                      
                      <div class="code block m-2">
-                           <pre>var listEls = document.querySelectorAll("li")</pre>
-                           <br>
-                           <pre>listEls.forEach(element => {</pre>
-                           <pre>      element.setAttribute("style","color: yellow; text-decoration: underline;")</pre>
-                           <pre>});</pre>
+                        <pre>var listEls = document.querySelectorAll("li")</pre>
+                        <br>
+                        <br><pre>listEls.forEach(element => {</pre>
+                        <br><pre>      element.setAttribute("style","color: yellow; text-decoration: underline;")</pre>
+                        <br><pre>});</pre>
                      </div>
                   </li>
                   <li>You can set other attributes than style too, e.g. <code>document.querySelector("img").setAttribute("src", "example.gif;")</code>
@@ -582,8 +578,8 @@
 
                      <div class="code block m-2">
                         <pre>var ele = document.createElement("li")</pre>
-                        <pre>ele.textContent = "This text was created and added to the DOM by JS."</pre>
-                        <pre>document.querySelector("#createappends > ul").appendChild(ele)</pre>
+                        <br><pre>ele.textContent = "This text was created and added to the DOM by JS."</pre>
+                        <br><pre>document.querySelector("#createappends > ul").appendChild(ele)</pre>
                      </div>
                   </li>
                </ul>
@@ -604,11 +600,11 @@
                         Hover over the spinner to demo code.
                         <div class="code block m-2">
                            <span class="comment">// <code>evListenerObj</code> is a predefined object.</span>
-                           <pre>evListenerObj.addEventListener("mouseover", function(event) {</pre>
-                           <pre>      event.preventDefault()</pre>
-                           <pre>      console.log(event)</pre>
-                           <pre>      alert("Hey :)")</pre>
-                           <pre> })</pre>
+                           <br><pre>evListenerObj.addEventListener("mouseover", function(event) {</pre>
+                           <br><pre>      event.preventDefault()</pre>
+                           <br><pre>      console.log(event)</pre>
+                           <br><pre>      alert("Hey :)")</pre>
+                           <br><pre> })</pre>
                         </div>
                      </li>
                      <li>Sometimes event listeners will refresh the page, which can be an undesired behaviour. This cna be stopped with <code>.preventDefault()</code> within the function of the event listener. This is where the <code>event</code> or <code>e</code> parameter can be used, as you would write it out like: <code>event.preventDefault()</code>. This should be used by default.</li>
@@ -628,15 +624,15 @@
                         <p>This text will change based on the value of the dropdown menu above.</p>
                         <div class="code block m-2">
                            <pre>var changekeybevent = document.querySelector("#changekeybevent");</pre>
-                           <pre>var ckbParent = document.querySelector("#keyboardevents > ul > li");</pre>
-                           <pre>var ckbChild = document.querySelector("#keyboardevents > ul > li > p");</pre>
-                           <pre>var newText;</pre>
-                           <br>
-                           <pre>changekeybevent.addEventListener("change", function(event){</pre>
-                           <pre>      event.preventDefault();</pre>
-                           <pre>      newtext = changekeybevent.value;</pre>
-                           <pre>      ckbChild.textContent = newtext;</pre>
-                           <pre>})</pre>
+                           <br><pre>var ckbParent = document.querySelector("#keyboardevents > ul > li");</pre>
+                           <br><pre>var ckbChild = document.querySelector("#keyboardevents > ul > li > p");</pre>
+                           <br><pre>var newText;</pre>
+                           <br><br>
+                           <br><pre>changekeybevent.addEventListener("change", function(event){</pre>
+                           <br><pre>      event.preventDefault();</pre>
+                           <br><pre>      newtext = changekeybevent.value;</pre>
+                           <br><pre>      ckbChild.textContent = newtext;</pre>
+                           <br><pre>})</pre>
                         </div>
                      </li>
                      <li>The <code>keydown</code> event type is also useful. It listens for any keypress (except backspace).
@@ -646,15 +642,15 @@
                      <br><button type="button" class="btn btn-danger btn-sm mx-2 my-1" id="cleartextarea" onclick="btnClearText()">Clear</button>
                         <div class="code block m-2">
                               <pre>var keydownevent = document.querySelector("#whatdausertypin")</pre>
-                              <pre>var textareakeydownevent = document.querySelector("#keydownevent")</pre>
+                              <br><pre>var textareakeydownevent = document.querySelector("#keydownevent")</pre>
                               <br>
-                              <pre>textareakeydownevent.addEventListener("keydown", function(event){</pre>
-                              <pre>      var key = event.key.toLowerCase()</pre>
-                              <pre>      var alphanumericchars = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("")</pre>
-                              <pre>      if (alphanumericchars.includes(key)) {</pre>
-                              <pre>            keydownevent.textContent += event.key</pre>
-                              <pre>      }</pre>
-                              <pre>})</pre>
+                              <br><pre>textareakeydownevent.addEventListener("keydown", function(event){</pre>
+                              <br><pre>      var key = event.key.toLowerCase()</pre>
+                              <br><pre>      var alphanumericchars = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("")</pre>
+                              <br><pre>      if (alphanumericchars.includes(key)) {</pre>
+                              <br><pre>            keydownevent.textContent += event.key</pre>
+                              <br><pre>      }</pre>
+                              <br><pre>})</pre>
                         </div>
                      </li>
                      <li>For forms, the <code>submit</code> event type listens for when the Enter button is pressed inside a form input field.</li>
@@ -688,18 +684,18 @@
 
                   <div class="code block m-2">
                      <pre>var timerInterval = setInterval(function(){</pre>
-                     <pre>      secondsLeft--;</pre>
-                     <span class="comment">// A predefined variable</span>
-                     <pre>      timerbutton.textContent = `${secondsLeft} seconds left until timer is up.`;</pre>
-                     <span class="comment">// Every time the function runs, this action will be repeated (<code>timerbutton</code> is also a predefined variable referring to an element in the DOM).</span>
+                     <br><pre>      secondsLeft--;</pre>
+                     <br><span class="comment">// A predefined variable</span>
+                     <br><pre>      timerbutton.textContent = `${secondsLeft} seconds left until timer is up.`;</pre>
+                     <br><span class="comment">// Every time the function runs, this action will be repeated (<code>timerbutton</code> is also a predefined variable referring to an element in the DOM).</span>
                      <br>
-                     <pre>      if (secondsLeft === 0) {</pre>
-                     <pre>            clearInterval(timerInterval);</pre>
-                     <pre>            timesUp();</pre>
-                     <pre>      }</pre>
-                     <span class="comment">// Once the time has run out, the function <code>timesUp()</code> will be called, and the <code>timerInterval</code> will be cleared, preventing this timer from running further.</span>
-                     <pre>}, 1000)</pre>
-                     <span class="comment">// Every 1000 ms the function is re-run.</span>
+                     <br><pre>      if (secondsLeft === 0) {</pre>
+                     <br><pre>            clearInterval(timerInterval);</pre>
+                     <br><pre>            timesUp();</pre>
+                     <br><pre>      }</pre>
+                     <br><span class="comment">// Once the time has run out, the function <br><code>timesUp()</code> will be called, and the <br><code>timerInterval</code> will be cleared, preventing this timer from running further.</span>
+                     <br><pre>}, 1000)</pre>
+                     <br><span class="comment">// Every 1000 ms the function is re-run.</span>
                   </div>
                   </li>
                </ul>
@@ -710,12 +706,12 @@
                   <li>Data Attributes allow for toggling of an element between different states with ease.</li>
                   <li>The simplest way to implement data attributes is by adding custom attributes to the element tag, as in the example below:
                      <div class="code block m-2">
-                     <pre>&lt;img</pre> 
-                     <pre>   src="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
-                     <pre>   data-state="gif1"</pre>
-                     <pre>   data-gif1="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
-                     <pre>   data-gif2="https://techcrunch.com/wp-content/uploads/2015/10/22.gif?w=700&crop=1"</pre>
-                     <pre>/&gt;</pre>
+                        <pre>&lt;img</pre> 
+                        <br><pre>   src="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
+                        <br><pre>   data-state="gif1"</pre>
+                        <br><pre>   data-gif1="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
+                        <br><pre>   data-gif2="https://techcrunch.com/wp-content/uploads/2015/10/22.gif?w=700&crop=1"</pre>
+                        <br><pre>/&gt;</pre>
                      </div>
                   </li>
                   <li>To obtain the data attribute of an example element, you would run <code><pre class="input">element</pre>.getAttribute("<pre class="input">data-state</pre>")</code></li>
@@ -753,13 +749,13 @@
                   <li>The array/object must be converted to a string when it is moved to local storage with <code>localStorage.setItem("<pre class="input">key</pre>", JSON.stringify(<pre class="input">value</pre>))</code>.</li>
                      <div class="code block m-2">
                         <pre>user = {</pre>
-                        <pre>      name: "john",</pre>
-                        <pre>      surname: "doe",</pre>
-                        <pre>      email: "john_doe@gmail.com",</pre>
-                        <pre>      password: "password123",</pre>
-                        <pre>}</pre>
+                        <br><pre>      name: "john",</pre>
+                        <br><pre>      surname: "doe",</pre>
+                        <br><pre>      email: "john_doe@gmail.com",</pre>
+                        <br><pre>      password: "password123",</pre>
+                        <br><pre>}</pre>
                         <br>
-                        <pre>localStorage.setItem("user", JSON.stringify(user))</pre>
+                        <br><pre>localStorage.setItem("user", JSON.stringify(user))</pre>
                      </div>
                   <li>Running <code>localStorage.getItem("user")</code> would retrieve the data but as a STRING not its initial data type.</li>
                   <li>Therefore, to get the item in a useful way (as an array/object), the data must be converted back from a string with: <code>JSON.parse(localStorage.getItem("<pre class="input">key</pre>"))</code>.</li>
@@ -798,10 +794,10 @@
                         <li>For altering multiple CSS styles at a time, you can do it as if it were an object, e.g.:
                            <div class="code block m-2">
                               <pre><span class="input">element</span>.css({</pre>
-                              <pre>      "background-color": "black",</pre>
-                              <pre>      "color": "red",</pre>
-                              <pre>      "font-size": "30rem"</pre>
-                              <pre>})</pre>
+                              <br><pre>      "background-color": "black",</pre>
+                              <br><pre>      "color": "red",</pre>
+                              <br><pre>      "font-size": "30rem"</pre>
+                              <br><pre>})</pre>
                            </div>
                         </li>
                      </ul>
@@ -818,11 +814,11 @@
 
                   <div class="code block m-2">
                         <pre>var placeToAddTheNewElement = $("#jqueryaddhere");</pre>
-                        <pre>var newBulletPoint = $("&lt;li&gt;");</pre>
-                        <pre>newBulletPoint.text("This element was created with jQuery.");</pre>
-                        <pre>newBulletPoint.css("color", "yellow");</pre>
-                        <pre>newBulletPoint.attr("id", "jqueryaddedelement");</pre>
-                        <pre>placeToAddTheNewElement.append(newBulletPoint)</pre>
+                        <br><pre>var newBulletPoint = $("&lt;li&gt;");</pre>
+                        <br><pre>newBulletPoint.text("This element was created with jQuery.");</pre>
+                        <br><pre>newBulletPoint.css("color", "yellow");</pre>
+                        <br><pre>newBulletPoint.attr("id", "jqueryaddedelement");</pre>
+                        <br><pre>placeToAddTheNewElement.append(newBulletPoint)</pre>
                   </div>
                   <ul id="jqueryaddhere"></ul>
                </ul>
@@ -837,8 +833,8 @@
 
                      <div class="code block m-2">
                         <pre>var jqueryDOMsect = $("#jquerydom")</pre>
-                        <span class="comment">The element with ID #jquerydom is this card. So the child's child is the bullet point above.</span>
-                        <pre>jqueryDOMsect.children().children().eq(1).addClass("yellowtext")</pre>
+                        <br><span class="comment">// The element with ID #jquerydom is this card. So the child's child is the bullet point above.</span>
+                        <br><pre>jqueryDOMsect.children().children().eq(1).addClass("yellowtext")</pre>
                      </div>
                   </li>
                   <li>If you know the tag/class/ID, you can also use that with <code><span class="input">element</span>.children(<span class="input">element</span>)</code> such as <code><span class="input">element</span>.children("h3")</code>.</li>
@@ -886,17 +882,17 @@
                      <div class="col-md-10">
                         <div class="code block m-2">
                            <pre>function handleFormSubmit(){</pre>
-                           <pre>      var checkedEl = $("input:checked")</pre>
-                           <pre>      var selected = []</pre>
-                           <pre>      $.each(checkedEl, function(){</pre>
-                           <pre>            selected.push($(this).val());</pre>
-                           <pre>            console.log(selected)</pre>
-                           <pre>      })</pre>
-                           <pre>      $("#checkboxes").text(`Fruits: ${selected.join(", ")}`)</pre>
-                           <pre>      $("input[type='checkbox']").prop("checked", false)</pre>
-                           <pre>}</pre>
+                           <br><pre>      var checkedEl = $("input:checked")</pre>
+                           <br><pre>      var selected = []</pre>
+                           <br><pre>      $.each(checkedEl, function(){</pre>
+                           <br><pre>            selected.push($(this).val());</pre>
+                           <br><pre>            console.log(selected)</pre>
+                           <br><pre>      })</pre>
+                           <br><pre>      $("#checkboxes").text(`Fruits: ${selected.join(", ")}`)</pre>
+                           <br><pre>      $("input[type='checkbox']").prop("checked", false)</pre>
+                           <br><pre>}</pre>
                            <br>
-                           <pre>$("#submit").on("click", handleFormSubmit)</pre>
+                           <br><pre>$("#submit").on("click", handleFormSubmit)</pre>
                         </div>
                      </div>
                   </div>
@@ -913,23 +909,23 @@
 
                   <div class="code block m-2">
                      <pre>var formEl = $("#jquerytypetext")</pre>
-                     <pre>var textfield = $("#textfield")</pre>
-                     <pre>var putItemshere = $("#jquerytextformlist")</pre>
+                     <br><pre>var textfield = $("#textfield")</pre>
+                     <br><pre>var putItemshere = $("#jquerytextformlist")</pre>
                      <br>
-                     <pre>function typetextformSubmit(event) {</pre>
-                     <pre>      event.preventDefault();</pre>
-                     <pre>      var newItem = (textfield.val());</pre>
-                     <pre>      textfield.val("");</pre>
+                     <br><pre>function typetextformSubmit(event) {</pre>
+                     <br><pre>      event.preventDefault();</pre>
+                     <br><pre>      var newItem = (textfield.val());</pre>
+                     <br><pre>      textfield.val("");</pre>
                      <br>
-                     <pre>      if (!newItem) {return;}</pre><span class="comment">// Prevents blank text from being entered.</span>
+                     <br><pre>      if (!newItem) {return;}</pre><span class="comment">  // Prevents blank text from being entered.</span>
                      <br>
-                     <pre>      var newItemEl = $("&lt;li&gt;");</pre>
-                     <pre>      newItemEl.text(newItem);</pre>
-                     <pre>      newItemEl.addClass("toremove")</pre>
-                     <pre>      putItemshere.append(newItemEl);</pre>
-                     <pre>}</pre>
+                     <br><pre>      var newItemEl = $("&lt;li&gt;");</pre>
+                     <br><pre>      newItemEl.text(newItem);</pre>
+                     <br><pre>      newItemEl.addClass("toremove")</pre>
+                     <br><pre>      putItemshere.append(newItemEl);</pre>
+                     <br><pre>}</pre>
                      <br>
-                     <pre>formEl.on("submit", typetextformSubmit)</pre>
+                     <br><pre>formEl.on("submit", typetextformSubmit)</pre>
                   </div>
                </ul>
             </div>
@@ -943,9 +939,9 @@
                   <li>Elements that are created with JS don't exist in the DOM on page load (they are loaded immediately after). This means that they can't be targeted with event listeners. The way around this is to use event delegation. This targets the parent element, with a secondary condition of specifying the element within it.
                      <div class="code block m-2">
                         <pre>EDparentEl.on("click", ".delete-item-btn", removeBtnED)</pre>
-                        <span class="comment">// [1] The line above uses event delegation - it targets the parent element, with a selector of the class of the button we click, and a function that deletes the button. This works.</span>
-                        <pre>DelItemBtn.on("click", removeBtnDefault)</pre>
-                        <span class="comment">// [2] This line uses a regular function, attached directly to the newly-created button element. This does not work.</span>
+                        <br><span class="comment">// [1] The line above uses event delegation - it targets the parent element, with a selector of the class of the button we click, and a function that deletes the button. This works.</span>
+                        <br><pre>DelItemBtn.on("click", removeBtnDefault)</pre>
+                        <br><span class="comment">// [2] This line uses a regular function, attached directly to the newly-created button element. This does not work.</span>
                      </div>
                   </li>
 
@@ -975,9 +971,9 @@
                   <li>To use jQuery UI, you need the following tags, one CSS library two JS tags: one for jQuery and one of jQuery UI.</li>
                   <div class="code block m-2">
                      <pre>&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"&gt;</pre>
-                     <pre>&lt;script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"&gt;&lt;/script&gt;</pre>
-                     <span class="comment">// The following tag is for jQuery, so don't include if it's already there.</span>
-                     <pre>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+                     <br><pre>&lt;script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"&gt;&lt;/script&gt;</pre>
+                     <br><span class="comment">// The following tag is for jQuery, so don't include if it's already there.</span>
+                     <br><pre>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
                   </div>
                </ul>
             </div>
@@ -1005,9 +1001,9 @@
                   <li>You can calculate the difference between two dates using <code>dayjs(<span class="input">date1</span>).diff(dayjs(<span class="input">date2</span>))</code>, by default it returns the difference in milliseconds.  You can also calculate in different units (e.g. days, weeks, months) by incuding it as the second argument. Note that the default behaviour does not include partial weeks in its calculation - this can be changed by including <code>true</code> as the third argument.
                      <div class="code block m-2">
                         <pre>today.diff(dayjs("2024-01-01"), "days")</pre>
-                        <span class="comment" id="firstdiff"></span>
-                        <pre>dayjs().diff(dayjs("2023-06-31"), "weeks", true)</pre>
-                        <span class="comment" id="secondiff"></span>
+                        <br><span class="comment" id="firstdiff"></span>
+                        <br><pre>dayjs().diff(dayjs("2023-06-31"), "weeks", true)</pre>
+                        <br><span class="comment" id="secondiff"></span>
                      </div>
                   </li>
                </ul>
@@ -1019,22 +1015,22 @@
                   <li>Using the <code>.fetch(<span class="input">queryURL</span>)</code> method, the data can be retrieved from the server API. It will come in a <code>.json</code> file format (or an <code>.xml</code>).
                      <div class="code block m-2">
                         <pre>fetch(<span class="input">queryURL</span>)</pre>
-                        <pre>      .then(function (response) {</pre>
-                        <pre>            return response.json();</pre>
-                        <pre>      }).then(function (data){</pre>
-                        <pre>            <span class="input">what you want to do with the data</span>;</pre>
-                        <pre>      });</pre>
+                        <br><pre>      .then(function (response) {</pre>
+                        <br><pre>            return response.json();</pre>
+                        <br><pre>      }).then(function (data){</pre>
+                        <br><pre>            <span class="input">what you want to do with the data</span>;</pre>
+                        <br><pre>      });</pre>
                      </div>
                   </li>
                   <li>Because <code>fetch</code> gets data from an external site, it is asynchronous. This means the response from <code>fetch</code> won't necessarily arrive before other lines of JavaScript are run.
                      <div class="code block m-2">   
                         <pre>fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")</pre>
-                        <pre>.then(function (response) {</pre>
-                        <pre>      return response.json();</pre>
-                        <pre>}).then(function (data){</pre>
-                        <pre>      pokename.text(data.species.name)</pre>
-                        <pre>      pokeimg.attr("src", data.sprites.front_default)</pre>
-                        <pre>});</pre>
+                        <br><pre>.then(function (response) {</pre>
+                        <br><pre>      return response.json();</pre>
+                        <br><pre>}).then(function (data){</pre>
+                        <br><pre>      pokename.text(data.species.name)</pre>
+                        <br><pre>      pokeimg.attr("src", data.sprites.front_default)</pre>
+                        <br><pre>});</pre>
                      </div>
                   </li>
                </ul>
@@ -1076,7 +1072,6 @@
    <div class="container-fluid" id="es6nodejsnotes">
       <h1 class="py-4 text-center">ES6 and Node.js</h1>
       <div class="row justify-content-evenly">
-
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="arrowfunctions">
                <h3 class="text-center py-2">Arrow Functions</h3>
@@ -1107,32 +1102,31 @@
                   <li><code>.filter()</code> returns a new array based on the filter options. e.g. <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.filter((<span class="input">input element</span>) => <span class="input">expression</span>)</code>. e.g.: 
                      <div class="code block m-2">
                         <pre>const moviePatrons = [</pre>
-                        <pre>      { name: "Tom", age: 16 },</pre>
-                        <pre>      { name: "Ashley", age: 31 },</pre>
-                        <pre>      { name: "Sarah", age: 18 },</pre>
-                        <pre>      { name: "Alvin", age: 22 },</pre>
-                        <pre>      { name: "Cherie", age: 14 },</pre>
-                        <pre>      { name: "Malcolm", age: 15 }</pre>
-                        <pre>];</pre>
+                        <br><pre>      { name: "Tom", age: 16 },</pre>
+                        <br><pre>      { name: "Ashley", age: 31 },</pre>
+                        <br><pre>      { name: "Sarah", age: 18 },</pre>
+                        <br><pre>      { name: "Alvin", age: 22 },</pre>
+                        <br><pre>      { name: "Cherie", age: 14 },</pre>
+                        <br><pre>      { name: "Malcolm", age: 15 }</pre>
+                        <br><pre>];</pre>
                         <br>
-                        <pre>const canWatchRatedR = moviePatrons.filter((patron) => patron.age > 17);</pre>
+                        <br><pre>const canWatchRatedR = moviePatrons.filter((patron) => patron.age > 17);</pre>
                      </div>
                   </li>
                   <li>The other functional loop is <code>.map()</code> which returns a brand new array by applying actions to all the elements of a previous array. It's syntax is <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.map((<span class="input">input element</span>) => <span class="input">expression</span>)</code> It differs from <code>foreach</code> as it creates a <strong>new</strong> array with the new values, rather than affecting the original array. e.g.:
                      <div class="code block m-2">
                         <pre>const array1 = [1, 4, 9, 16];</pre>
-                        <pre>const array2 = array1.map((number) => number*2);</pre>
+                        <br><pre>const array2 = array1.map((number) => number*2);</pre>
                         <br>
-                        <pre>console.log(array1);</pre>
-                        <span class="comment">// This would return Array [1, 4, 9, 16]</span>
-                        <pre>console.log(array2);</pre>
-                        <span class="comment">// This would return Array [2, 8, 18, 32]</span>
+                        <br><pre>console.log(array1);</pre>
+                        <br><span class="comment">// This would return Array [1, 4, 9, 16]</span>
+                        <br><pre>console.log(array2);</pre>
+                        <br><span class="comment">// This would return Array [2, 8, 18, 32]</span>
                      </div>
                   </li> 
                </ul>
             </div>
          </div>
-
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="nodebasics">
                <h3 class="text-center py-2">Node.js Basics</h3>
@@ -1158,8 +1152,8 @@
                   <li>To read the contents of a file and manipulate the data you can use the following lines of code. The <code>.readFile("<span class="input">filename</span>", "<span class="input">encoding</span>", (error, data) => <span class="input">...</span>)</code> allows you to use an if-else statement or a ternary operator to print either the error or the data, in the following example:
                      <div class="code block m-2">
                         <pre>fs.readFile('data.csv', 'utf8', (error, data) =></pre>
-                        <pre>  error ? console.error(error) : console.log(data)</pre>
-                        <pre>);</pre>
+                        <br><pre>  error ? console.error(error) : console.log(data)</pre>
+                        <br><pre>);</pre>
                      </div>
                   </li>
                   <li><code>"utf8"</code> encodes the raw buffer data in human-readable format.
@@ -1167,8 +1161,8 @@
                   <li>Likewise, using <code>.writeFile("<span class="input">filename</span>", "<span class="input">input</span>", (error) => <span class="input">...</span>)</code> allows you to write data to a file. The full syntax is:
                      <div class="code block m-2">
                         <pre>fs.writeFile('log.txt', process.argv[2], (error) =></pre>
-                        <pre>  error ? console.error(err) : console.log('Success!')</pre>
-                        <pre>);</pre>
+                        <br><pre>  error ? console.error(err) : console.log('Success!')</pre>
+                        <br><pre>);</pre>
                      </div>
                   </li>
                   <li>N.B. In the above examples the <code>error ? ...</code> line is using the <a href="#ternaryop">ternary operator</a>.</li>
@@ -1181,9 +1175,9 @@
                   <li><code>module.exports</code> is an object we use to store variables or methods that other JS files can access. There can only be <strong>one</strong> of thse per JS file. Its syntax is:
                      <div class="code block m-2">
                         <pre>module.exports = {</pre>
-                        <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
-                        <pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
-                        <pre>};</pre>
+                        <br><pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
+                        <br><pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
+                        <br><pre>};</pre>
                      </div>
                   </li>
                   <li>Likewise, to get the exports from one file, you need to <code>require("<span class="input">filepath</span>")</code> in the other to receive them. This sets the variables/methods you exported into a custom variable in this new JS file, e.g.:

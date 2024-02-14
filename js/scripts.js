@@ -648,4 +648,4 @@ $("#giphysearch").on("submit", function(event){
                   `)
             });
       })
-})
+});
