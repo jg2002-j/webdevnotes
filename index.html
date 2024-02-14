@@ -553,12 +553,31 @@
                                     <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
                                     <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
                                     <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
+                                    <li>Running <code>console.log(process.argv);</code> returns an array of command line arguments. Those items can be accessed via index number, e.g. <code>console.log(process.argv[<span class="input">2</span>])</code>. This just allows you to get inputs from what is entered into the command line, if you wanted to use that in the code (for example to verify user input).</li>
+                                    <li id="ternaryop">JavaScript also has a ternary operator <code>?</code> which takes in three parameters: <code><span class="input">condition</span> ? <span class="input">expression if condition is true</span> : <span class="input">expression if condition is false</span></code>, e.g. <code>console.log(1 == 1 ? "True" : "False")</code> would print <code>True</code>.</li>
                               </ul>
                         </div>
-                        <div class="card my-2" id="title">
-                              <h3 class="text-center py-2">Title</h3>
+                        <div class="card my-2" id="readwritefile">
+                              <h3 class="text-center py-2">Reading and Writing Files</h3>
                               <ul>
-                                    <li></li>
+                                    <li><code>fs</code> is a Node standard library package for reading and writing files. Putting <code>const fs = require("fs");</code> in the JS file adds it.</li>
+                                    <li>To read the contents of a file and manipulate the data you can use the following lines of code. The <code>.readFile("<span class="input">filename</span>", "<span class="input">encoding</span>", (error, data) =></code> allows you to use an if-else statement or a ternary operator to print either the error or the data, in the following example:
+                                          <div class="code block m-2">
+                                                <pre>fs.readFile('data.csv', 'utf8', (error, data) =></pre>
+                                                <pre>  error ? console.error(error) : console.log(data)</pre>
+                                                <pre>);</pre>
+                                          </div>
+                                    </li>
+                                    <li><code>"utf8"</code> encodes the raw buffer data in human-readable format.
+                                    </li>
+                                    <li>Likewise, using <code>.writeFile("<span class="input">filename</span>", "<span class="input">input</span>", (error) =></code> allows you to write data to a file. The full syntax is:
+                                          <div class="code block m-2">
+                                                <pre>fs.writeFile('log.txt', process.argv[2], (error) =></pre>
+                                                <pre>  error ? console.error(err) : console.log('Success!')</pre>
+                                                <pre>);</pre>
+                                          </div>
+                                    </li>
+                                    <li>N.B. In the above examples the <code>error ? ...</code> line is using the <a href="#ternaryop">ternary operator</a>.</li>
                               </ul>
                         </div>
                         <div class="card my-2" id="title">

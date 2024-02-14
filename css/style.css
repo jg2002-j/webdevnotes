@@ -6,6 +6,7 @@
 
 *{
       font-family: 'Cabinet Grotesk', sans-serif;
+      scroll-margin-top: 5rem;
 }
 
 body{
@@ -26,7 +27,6 @@ h3{
 }
 
 .card{
-      scroll-margin-top: 5rem;
       min-height: 100px;
       font-family: 'Cabinet Grotesk', sans-serif;
 }
@@ -55,6 +55,7 @@ code, .input{
       padding: 10px;
       border: var(--bs-card-border-width) solid var(--bs-card-border-color);
       border-radius: var(--bs-border-radius);
+      overflow-x: auto;
 }
 
 .code pre{
@@ -62,12 +63,15 @@ code, .input{
       font-size: 0.875em;
       color: var(--bs-code-color);
       margin: 0;
+      overflow-x: inherit;
 }
 
 .code .input{
       cursor: default;
       user-select: none;
       /* font-size: 0.875em; */
+      overflow-x: inherit;
+
 }
 
 .code .comment{
@@ -77,5 +81,12 @@ code, .input{
       font-family: 'Roboto Mono', monospace;
       color: rgb(165, 165, 165);
       text-wrap: wrap;
+      overflow-x: inherit;
 }
 
+
+:target{animation: target-fade 2s;}
+@keyframes target-fade {
+	from {background-color: rgba(255, 255, 255, 0.4);}
+	to { background-color: transparent; }
+}
