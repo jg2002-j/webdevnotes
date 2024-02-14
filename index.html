@@ -24,7 +24,7 @@
 </head>
 <body>
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top rounded-top-0 rounded">
+      <nav class="navbar navbar-expand bg-body-tertiary sticky-top rounded-top-0 rounded">
             <div class="container-fluid">
                   <a class="navbar-brand" href="#">Web Development Notes</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -59,10 +59,10 @@
                               <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#es6nodejsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">ES6 & Node.js</a>
                                     <ul class="dropdown-menu">
-                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
                                           <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#arrowfunctions">Arrow Functions</a></li>
                                           <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#letconst">"Let" & "Const"</a></li>
-                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#functionalloops">Functional Loops</a></li>
+                                          <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
                                           <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                                           <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                                           <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
@@ -83,7 +83,7 @@
       <div class="container-fluid" id="jsnotes">
             <h1 class="py-4 text-center">JavaScript</h1>
             <div class="row justify-content-evenly">
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                         <div class="card my-2" id="useful">
                               <h3 class="text-center py-2">Useful Things</h3>
                               <ul>
@@ -188,7 +188,7 @@
                         </div>
                   </div>
 
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                         <div class="card my-2" id="condstatements">
                               <h3 class="text-center py-2">Conditional Statements</h3>
                               <ul>
@@ -324,7 +324,7 @@
 
                   </div>
 
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                         <div class="card my-2" id="functions">
                               <h3 class="text-center py-2">Functions</h3>
                               <ul>
@@ -478,27 +478,11 @@
             </div>
       </div>
 
-
       <div class="container-fluid" id="es6nodejsnotes">
             <h1 class="py-4 text-center">ES6 and Node.js</h1>
             <div class="row justify-content-evenly">
 
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
-                        <div class="card my-2" id="nodebasics">
-                              <h3 class="text-center py-2">Node.js Basics</h3>
-                              <ul>
-                                    <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
-                                    <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
-                                    <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
-                                    <ul>
-                                          <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
-                                          <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
-                                    </ul>
-                                    <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
-                                    <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
-                                    <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
-                              </ul>
-                        </div>
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                         <div class="card my-2" id="arrowfunctions">
                               <h3 class="text-center py-2">Arrow Functions</h3>
                               <ul>
@@ -522,9 +506,55 @@
                                     <li>An exception is that while using <code>while</code> loops, values created inside also exist outside of the loop.</li>
                               </ul>
                         </div>
+                        <div class="card my-2" id="functionalloops">
+                              <h3 class="text-center py-2">Functional Loops</h3>
+                              <ul>
+                                    <li>The <code>.foreach()</code> loop is a functional way of iterating through an array without using a <code>for</code> loop, its syntax is <code><span class="input">arrayName</span>.foreach((<span class="input">input element</span>) => <span class="input">expression</span>)</code>.</li>
+                                    <li><code>.filter()</code> returns a new array based on the filter options. e.g. <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.filter((<span class="input">input element</span>) => <span class="input">expression</span>)</code>. e.g.: 
+                                          <div class="code block m-2">
+                                                <pre>const moviePatrons = [</pre>
+                                                <pre>      { name: "Tom", age: 16 },</pre>
+                                                <pre>      { name: "Ashley", age: 31 },</pre>
+                                                <pre>      { name: "Sarah", age: 18 },</pre>
+                                                <pre>      { name: "Alvin", age: 22 },</pre>
+                                                <pre>      { name: "Cherie", age: 14 },</pre>
+                                                <pre>      { name: "Malcolm", age: 15 }</pre>
+                                                <pre>];</pre>
+                                                <br>
+                                                <pre>const canWatchRatedR = moviePatrons.filter((patron) => patron.age > 17);</pre>
+                                          </div>
+                                    </li>
+                                    <li>The other functional loop is <code>.map()</code> which returns a brand new array by applying actions to all the elements of a previous array. It's syntax is <code>const <span class="input">newArrayName</span> = <span class="input">arrayName</span>.map((<span class="input">input element</span>) => <span class="input">expression</span>)</code> It differs from <code>foreach</code> as it creates a <strong>new</strong> array with the new values, rather than affecting the original array. e.g.:
+                                          <div class="code block m-2">
+                                                <pre>const array1 = [1, 4, 9, 16];</pre>
+                                                <pre>const array2 = array1.map((number) => number*2);</pre>
+                                                <br>
+                                                <pre>console.log(array1);</pre>
+                                                <span class="comment">// This would return Array [1, 4, 9, 16]</span>
+                                                <pre>console.log(array2);</pre>
+                                                <span class="comment">// This would return Array [2, 8, 18, 32]</span>
+                                          </div>
+                                    </li> 
+                              </ul>
+                        </div>
                   </div>
 
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+                        <div class="card my-2" id="nodebasics">
+                              <h3 class="text-center py-2">Node.js Basics</h3>
+                              <ul>
+                                    <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
+                                    <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
+                                    <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
+                                    <ul>
+                                          <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
+                                          <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
+                                    </ul>
+                                    <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
+                                    <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
+                                    <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
+                              </ul>
+                        </div>
                         <div class="card my-2" id="title">
                               <h3 class="text-center py-2">Title</h3>
                               <ul>
@@ -545,7 +575,7 @@
                         </div>
                   </div>
 
-                  <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+                  <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                         <div class="card my-2" id="title">
                               <h3 class="text-center py-2">Title</h3>
                               <ul>
