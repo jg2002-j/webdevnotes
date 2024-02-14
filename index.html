@@ -5,7 +5,6 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./style.css">
       <link rel="icon" type="image/x-icon" href="./assets/favicon.svg">
       <title>Web Development Notes</title>
       <!-- bootstrap -->
@@ -33,7 +32,7 @@
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#jsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">JavaScript</a>
                   <ul class="dropdown-menu">
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#useful">Useful Things</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#usefuljs">Useful Things</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#datatypesandoperators">Data types and Operators</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#arrays">Arrays</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#condstatements">Conditional Statements</a></li>
@@ -51,30 +50,52 @@
                   </ul>
                </li>
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">APIs</a>
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web APIs</a>
                   <ul class="dropdown-menu">
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#usefulapi">Useful Info</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#setattribute">Setting Attributes</a></li>                  
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#createappends">Creating and Appending Elements</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#timerinterval">Timers and Intervals</a></li>                  
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#eventlisteners">Event Listeners</a></li>                  
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#keyboardevents">Keyboard Events</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#bubbles">Event Bubbling</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#dataattributes">Data Attributes</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#localstorageuser">Local Storage</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">3rd Party & Server APIs</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jqueryel">jQuery Elements</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jquerydom">jQuery DOM</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jqueryevents">jQuery Events</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jqueryforms">jQuery Forms</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#apiscoping">Scoping</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jqueryuiwidgets">jQuery UI Widgets</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#jqueryuiinteractions">jQuery UI Interactions</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#dayjsformat">Day.js Format</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#fetch">Fetch</a></li> 
                   </ul>
                </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#es6nodejsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">ES6 & Node.js</a>
                   <ul class="dropdown-menu">
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#arrowfunctions">Arrow Functions</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#letconst">"Let" & "Const"</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#functionalloops">Functional Loops</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#nodefs">Node File System</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
-                     <li><a type="button" class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#arrowfunctions">Arrow Functions</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#letconst">"Let" & "Const"</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#functionalloops">Functional Loops</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#nodefs">Node File System</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#modularisation">Modularisation</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                   </ul>
                </li>
             </ul>
             <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
          </div>
       </div>
@@ -84,7 +105,7 @@
       <h1 class="py-4 text-center">JavaScript</h1>
       <div class="row justify-content-evenly">
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-            <div class="card my-2" id="useful">
+            <div class="card my-2" id="usefuljs">
                <h3 class="text-center py-2">Useful Things</h3>
                <ul>
                   <li><code>Math.random()</code> always chooses a random number between 0 and 1. The <code>Math.round()</code> rounds the number to the nearest integer. Therefore, using <code>Math.round(Math.random() * <span class="input">number</span>)</code> can get random numbers greater than 1. e.g. <code>Math.round(Math.random() * 3)</code> would return a random integer between 1 and 3.</li>
@@ -478,6 +499,580 @@
       </div>
    </div>
 
+   <div class="container-fluid" id="webapis">
+      <h1 class="py-4 text-center">Web APIs</h1>
+      <div class="row justify-content-evenly">
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+            <div class="card my-2" id="usefulapi">
+               <h3 class="text-center py-2">Useful Info</h3>
+               <ul>
+                  <li>Web APIs are built into the web browser and contain methods that allow us to manipulate a webpage using JavaScript. We use Web APIs to create elements and add them to the browser or to add and remove styles and attributes via JavaScript.</li>
+                  <li>The <code>this</code> attribute refers to the outermost object to where it is placed. Unless inside a custom function/method etc, it will refer to the window.</li>
+                  <li>One way to navigate through the DOM/objects in the window is as below. You can use <code>.children[<span class="input">index number</span>]</code> to navigate throught the children of an object too, and using <code class="code">console.log(document.body.children)</code> would list the children of the body object, for example, as an array.
+                     <ul>
+                        <li><code>console.log(window)</code> shows the window object and all its members.</li>
+                        <li><code>console.log(window.document)</code> shows the document object and all its members - this is similar to the HTML document.</li>
+                        <li><code>console.log(<span class="input">element</span>)</code> shows the specified element and all its members.</li>
+                        <li><code>console.log(document.head)</code> shows the header tag and all its members, as in a HTML file.</li>
+                     </ul>
+                  </li>
+                  <li>The other way can be to access elements by their class or id. To do this, use <code>document.querySelector()</code>, which would find the first element that matches, or <code>document.querySelectorAll()</code>, which would provide an array of all elements that match.
+                     <br>
+                     Inside the brackets you can refer to an element with CSS notation by its class or element, e.g. <code>document.querySelector("<span class="input">#exampleID</span>")</code> or <code>document.querySelector("<span class="input">.exampleClass</span>")</code>. You can also use tag names here. Besides <code>querySelector</code>, there are several ways to target more specifically:
+                     <ul>
+                        <li><code>document.getElementbyId()</code></li>
+                        <li><code>document.getElementbyClassName()</code></li>
+                        <li><code>document.getElementbyTagName()</code></li>
+                        <li>These methods don't require the <code>#</code> or <code>.</code>, etc. as it already specifies what it is searching for.</li>
+                     </ul>
+                  </li>
+                  <li>Input fields by default collect the data the user enters into the field. To record this in JS, use the <code>.value</code> method in conjunction with a variable to store it, e.g. <code>var recordedInput = document.querySelector("<span class="input">element</span>").value</code></li>
+                  <li>Appending <code>.trim()</code> removes any blank space before and after a value. e.g. <code>          javascript</code> would be shortened to <code>javascript</code></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="setattribute">
+               <h3 class="text-center py-2">Setting Attributes</h3>
+               <ul>
+                  <li>By accessing elements, you can set their styles in JavaScript with the <code>.style</code> method. You can also change other properties with other methods, e.g.:
+                     <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="changeText(textbox)">Demo code</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="undochangeText(textbox)">Revert</button>
+                     
+                     <div class="code block m-2">
+                        <pre>var textbox = document.querySelector("#setattribute > ul > li:nth-child(1)")</pre>
+                        <span class="comment">// This defines a variable and assigns it the appropriate document object.</span>
+                        <pre>textbox.style.color = "red"</pre>
+                        <pre>textbox.style.fontFamily = "monospace"</pre>
+                        <span class="comment">//This sets the font color to red, and the font to "Cabinet Grotesk".</span>
+                     </div>
+                  </li>
+                  <li>If you want to change multiple attributes at once, instead of typing out <code>.style.<span class="input">attribute</span></code> for each attribute, you can use <code>.setAttribute("<span class="input">attributeName</span>", "<span class="input">attributeValue(s)</span>")</code>e.g. <code>document.querySelector("#customClass").setAttribute("style","color: yellow; font-size: 0.85rem; text-decoration: underline;")</code> would set the first element with the class <code>customClass</code> with the style attributes listed above. 
+                     <br>
+                     <span class="comment">NB. This could be re-written much neater with convenience variables, indentation, etc.</span>
+                  </li>
+                  <li>Combined with for loops and the <code>document.querySelectorAll()</code> (which generates an array of all elements that match the requirements), you can adjust multiple things quickly:
+                     <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="changeallLI(listEls)">Demo code</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="undochangeallLI(listEls)">Revert</button>
+                     
+                     <div class="code block m-2">
+                           <pre>var listEls = document.querySelectorAll("li")</pre>
+                           <br>
+                           <pre>listEls.forEach(element => {</pre>
+                           <pre>      element.setAttribute("style","color: yellow; text-decoration: underline;")</pre>
+                           <pre>});</pre>
+                     </div>
+                  </li>
+                  <li>You can set other attributes than style too, e.g. <code>document.querySelector("img").setAttribute("src", "example.gif;")</code>
+                     <div class="card mx-auto my-2 col-8">
+                        <img src="" class="card-img-top" alt="[ Currently there is no image source ]">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                           <br><button type="button" class="btn btn-success btn-sm m-auto" onclick="changeimagefunct()">Demo code</button>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="card my-2" id="createappends">
+               <h3 class="text-center py-2">Creating and Appending Elements</h3>
+               <ul>
+                  <li>You can create a new element with <code>document.createElement(<span class="input">element name</span>)</code>.</li>
+                  <li>The second step is to add this newly created element (which only exists in the JS file right now) to the DOM. To do this use <code>document.body.<span class="input">the path where you want to insert the element</span>.appendChild(<span class="input">element</span>)</code>.</li>
+                  <li>The next step is to add content to this new element. There are a few ways to do this, but for simple text-container elements (e.g. div, p, h1, title) you can use <code>.textContent()</code>.
+                     <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="addele()">Demo code</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="undoaddele()">Revert</button>
+
+                     <div class="code block m-2">
+                        <pre>var ele = document.createElement("li")</pre>
+                        <pre>ele.textContent = "This text was created and added to the DOM by JS."</pre>
+                        <pre>document.querySelector("#createappends > ul").appendChild(ele)</pre>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+               <div class="card my-2" id="eventlisteners">
+                  <h3 class="text-center py-2">Event Listeners</h3>
+                  <ul>
+                     <li>Event listeners are the functionality of JavaScript to wait for a user interaction before enacting some code.</li>
+                     <li>The syntax is <code><span class="input">targetElement</span>.addEventListener("<span class="input">type</span>", "<span class="input">function()</span>)</code>. The <code>targetElement</code> is the element in the DOM (accessed via <code>document.querySelector()</code>, for instance); the <code>type</code> is the type of interaction to listen for: i.e. <code>click</code> or <code>mouseover</code>; and <code>function()</code> is the function that will run (can be written in place, or defined beforehand).</li>
+                     <li> Note that the <code>event</code> parameter can also commonly be written as just <code>e</code> or omitted entirely if not used within the function.
+                        <div class="d-flex justify-content-start align-items-center p-2">
+                           <div class="spinner-border spinner-border-sm m-2" role="status">
+                              <span class="visually-hidden">Event Listener Spinner</span>
+                           </div>
+                        </div>
+                        Hover over the spinner to demo code.
+                        <div class="code block m-2">
+                           <span class="comment">// <code>evListenerObj</code> is a predefined object.</span>
+                           <pre>evListenerObj.addEventListener("mouseover", function(event) {</pre>
+                           <pre>      event.preventDefault()</pre>
+                           <pre>      console.log(event)</pre>
+                           <pre>      alert("Hey :)")</pre>
+                           <pre> })</pre>
+                        </div>
+                     </li>
+                     <li>Sometimes event listeners will refresh the page, which can be an undesired behaviour. This cna be stopped with <code>.preventDefault()</code> within the function of the event listener. This is where the <code>event</code> or <code>e</code> parameter can be used, as you would write it out like: <code>event.preventDefault()</code>. This should be used by default.</li>
+                     <li>Console logging out <code>event.target</code> will show what element triggered the event, even if that's the child within the parent which had the event listener.</li>
+                  </ul>
+               </div>
+               <div class="card my-2" id="keyboardevents">
+                  <h3 class="text-center py-2">Keyboard Events</h3>
+                  <ul>
+                     <li>Another common event listener is the <code>change</code> type. This listens for a change in the value of an object - for example, on a dropdown menu:
+                        <br>
+                        <select class="m-2 p-1 rounded" id="changekeybevent">
+                           <option value="">Default</option>
+                           <option value="red">Option 1</option>
+                           <option value="cyan">Option 2</option>
+                        </select>
+                        <p>This text will change based on the value of the dropdown menu above.</p>
+                        <div class="code block m-2">
+                           <pre>var changekeybevent = document.querySelector("#changekeybevent");</pre>
+                           <pre>var ckbParent = document.querySelector("#keyboardevents > ul > li");</pre>
+                           <pre>var ckbChild = document.querySelector("#keyboardevents > ul > li > p");</pre>
+                           <pre>var newText;</pre>
+                           <br>
+                           <pre>changekeybevent.addEventListener("change", function(event){</pre>
+                           <pre>      event.preventDefault();</pre>
+                           <pre>      newtext = changekeybevent.value;</pre>
+                           <pre>      ckbChild.textContent = newtext;</pre>
+                           <pre>})</pre>
+                        </div>
+                     </li>
+                     <li>The <code>keydown</code> event type is also useful. It listens for any keypress (except backspace).
+                     <br>
+                     <p class="m-2" id="whatdausertypin" style="font-family: 'Roboto Mono', monospace;"> </p>
+                     <textarea class="w-75 mx-2 my-1" id="keydownevent" rows="1" placeholder="Text typed here will appear above"></textarea>
+                     <br><button type="button" class="btn btn-danger btn-sm mx-2 my-1" id="cleartextarea" onclick="btnClearText()">Clear</button>
+                        <div class="code block m-2">
+                              <pre>var keydownevent = document.querySelector("#whatdausertypin")</pre>
+                              <pre>var textareakeydownevent = document.querySelector("#keydownevent")</pre>
+                              <br>
+                              <pre>textareakeydownevent.addEventListener("keydown", function(event){</pre>
+                              <pre>      var key = event.key.toLowerCase()</pre>
+                              <pre>      var alphanumericchars = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("")</pre>
+                              <pre>      if (alphanumericchars.includes(key)) {</pre>
+                              <pre>            keydownevent.textContent += event.key</pre>
+                              <pre>      }</pre>
+                              <pre>})</pre>
+                        </div>
+                     </li>
+                     <li>For forms, the <code>submit</code> event type listens for when the Enter button is pressed inside a form input field.</li>
+                  </ul>
+               </div>
+               <div class="card my-2" id="bubbles">
+                  <h3 class="text-center py-2">Event Bubbling</h3>
+                  <ul>
+                     <li>When a child with an event listener is inside a parent with its own event listener (of the same type), both event listeners will trigger if the child is triggered. For example, if the child has a <code>click</code> event, and the parent does too, both events would trigger when the child is clicked.</li>
+                     <li>This is a default behaviour but can be stopped with <code>event.stopPropagation()</code> rather than the <code>event.preventDefault()</code>.</li>
+                     <button type="button" class="btn btn-outline-secondary btn-sm ms-2 me-1 my-2" onclick="bubblingOff()" id="bubblingoff">With event.stopPropagation()</button>
+                     <button type="button" class="btn btn-outline-light btn-sm me-1" onclick="bubblingOn()" id="bubblingon">Without event.stopPropagation()</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="clearbubbleboxstyles()">Reset Colours</button>
+                     <div class="w-75 rounded border border-secondary p-2 m-2 d-flex justify-content-center align-items-center" id="outerbubblebox">
+                        <div class="w-75 rounded border border-secondary p-2 m-2 d-flex justify-content-center align-items-center" id="middlebubblebox">
+                           <div class="w-75 rounded border border-secondary m-2 text-center" id="innerbubblebox">
+                              <span class="comment">To demo behaviour: click this box, then middle box, then outer box.</span>
+                           </div>
+                        </div>
+                     </div>
+                  </ul>
+               </div>
+         </div>
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+            <div class="card my-2" id="timerinterval">
+               <h3 class="text-center py-2">Timers and Intervals</h3>
+               <ul>
+                  <li>To create a timer, use <code>setInterval(<span class="input">function</span>, <span class="input">delay</span>)</code>. The delay, in milliseconds, is the delay before the function is repeated.</li>
+                  <li>The biggest pitfall of <code>setInterval()</code> is that multiple timers cannot run at the same time - so there needs to be a way to remove the timer or stop it before another one is run. This is done with <code>clearInterval()</code>, inside the brackets you put the variable name that you assigned the setInterval function to previously.
+                  <br><button type="button" class="btn btn-success btn-sm m-2" onclick="stintvaltimer()">Demo code</button>
+
+                  <div class="code block m-2">
+                     <pre>var timerInterval = setInterval(function(){</pre>
+                     <pre>      secondsLeft--;</pre>
+                     <span class="comment">// A predefined variable</span>
+                     <pre>      timerbutton.textContent = `${secondsLeft} seconds left until timer is up.`;</pre>
+                     <span class="comment">// Every time the function runs, this action will be repeated (<code>timerbutton</code> is also a predefined variable referring to an element in the DOM).</span>
+                     <br>
+                     <pre>      if (secondsLeft === 0) {</pre>
+                     <pre>            clearInterval(timerInterval);</pre>
+                     <pre>            timesUp();</pre>
+                     <pre>      }</pre>
+                     <span class="comment">// Once the time has run out, the function <code>timesUp()</code> will be called, and the <code>timerInterval</code> will be cleared, preventing this timer from running further.</span>
+                     <pre>}, 1000)</pre>
+                     <span class="comment">// Every 1000 ms the function is re-run.</span>
+                  </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="card my-2" id="dataattributes">
+               <h3 class="text-center py-2">Data Attributes</h3>
+               <ul>
+                  <li>Data Attributes allow for toggling of an element between different states with ease.</li>
+                  <li>The simplest way to implement data attributes is by adding custom attributes to the element tag, as in the example below:
+                     <div class="code block m-2">
+                     <pre>&lt;img</pre> 
+                     <pre>   src="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
+                     <pre>   data-state="gif1"</pre>
+                     <pre>   data-gif1="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"</pre>
+                     <pre>   data-gif2="https://techcrunch.com/wp-content/uploads/2015/10/22.gif?w=700&crop=1"</pre>
+                     <pre>/&gt;</pre>
+                     </div>
+                  </li>
+                  <li>To obtain the data attribute of an example element, you would run <code><pre class="input">element</pre>.getAttribute("<pre class="input">data-state</pre>")</code></li>
+                  <li>Another way to get the <code>data state</code> is to use <code><pre class="input">element</pre>.dataset.state</code>: the <code>dataset</code> is equivalent to the <code>data</code> from the HTML, and the <code>.state</code> is equivalent to the <code>-state</code>.</li>
+                  <li>This information can then be used to switch the state of the image in an <code>if</code> loop.</li>
+
+                  <img 
+                     id="DAimgdemo"
+                     class="rounded m-2 border border-light mw-100"
+                     src="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"
+                     data-state="gif1"
+                     data-gif1="https://techcrunch.com/wp-content/uploads/2015/10/14.gif?w=700&crop=1"
+                     data-gif2="https://techcrunch.com/wp-content/uploads/2015/10/22.gif?w=700&crop=1"
+                     alt="Star Wars GIF thumbnail"
+                  />
+               </ul>
+            </div>
+            <div class="card my-2" id="localstorageuser">
+               <h3 class="text-center py-2">Local Storage</h3>
+               <ul>
+                  <li>Local Storage objects persist through page refreshes.</li>
+                  <div class="w-50 m-2 d-flex flex-column align-items-center justify-content-center p-3 rounded border ">
+                     <h4><span class="badge text-bg-secondary m-2" id="lscount">Counter</span></h4>
+                     <div class="d-flex justify-content-evenly">
+                        <button type="button" class="btn btn-success btn-sm m-2 px-3" onclick="LSadd()">+</button>
+                        <button type="button" class="btn btn-danger btn-sm m-2 px-3" onclick="LSminus()">-</button>
+                        <button type="button" class="btn btn-secondary btn-sm m-2 px-3" onclick="LSremove()">Reset</button>
+                     </div>
+                  </div>
+                  <li>To store a value in local storage use: <code>localStorage.setItem("<pre class="input">key</pre>", "<pre class="input">value</pre>")</code>.</li>
+                  <li>To obtain a value from local storage use: <code>localStorage.getItem("<pre class="input">key</pre>")</code>.</li>
+                  <li>To remove a vlue from local storage use: <code>localStorage.removeItem("<pre class="input">key</pre>")</code></li>
+                  <h5 class="mt-4">For Arrays/Objects:</h5>
+                  <li>Items can be stored in local storage as an array/object too, which makes organising the key/value pairs much easier. To do this though, the items should be stored in a normal array/object first, and then that object can be set as an item in local storage.
+                  <li>The array/object must be converted to a string when it is moved to local storage with <code>localStorage.setItem("<pre class="input">key</pre>", JSON.stringify(<pre class="input">value</pre>))</code>.</li>
+                     <div class="code block m-2">
+                        <pre>user = {</pre>
+                        <pre>      name: "john",</pre>
+                        <pre>      surname: "doe",</pre>
+                        <pre>      email: "john_doe@gmail.com",</pre>
+                        <pre>      password: "password123",</pre>
+                        <pre>}</pre>
+                        <br>
+                        <pre>localStorage.setItem("user", JSON.stringify(user))</pre>
+                     </div>
+                  <li>Running <code>localStorage.getItem("user")</code> would retrieve the data but as a STRING not its initial data type.</li>
+                  <li>Therefore, to get the item in a useful way (as an array/object), the data must be converted back from a string with: <code>JSON.parse(localStorage.getItem("<pre class="input">key</pre>"))</code>.</li>
+               </ul>
+            </div>
+         </div>                         
+      </div>
+   </div>
+
+   <div class="container-fluid" id="thirdpartyserverapis">
+      <h1 class="py-4 text-center">3rd Party & Server APIs</h1>
+      <div class="row justify-content-evenly">
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+            <div class="card my-2" id="jqueryel">
+               <h3 class="py-2 text-center">jQuery Elements</h3>
+               <ul>
+                  <li>jQuery is accessed via a <a href="https://releases.jquery.com/">CDN link</a>. Minified version allows for slightly better performance since the indentation, spacing, etc. is reduced - but so is the readability.</li>
+                  <li>The idea behind jQuery is that it compresses vanilla JS lines into a much slimmer version, e.g. <code>document.getElementbyId("header")</code> in vanilla JS would be <code>$("#header")</code> in jQuery.</li>
+                  <li>To get a list of all the methods jQuery provides, run <code>console.log($())</code>.</li>
+                  <li>Referencing elements on the page with jQuery is done with <code>$("<span class="input">element tag /.element class / #element ID</span>")</code>. 
+                     <ul>
+                        <li>Note that for element tags no syntax is used (i.e. the <code>&lt;&gt;</code>) as that would create an element not reference it. However, when searching for classes/IDs <code>.</code> or <code>#</code> must be used.</li>
+                     </ul>
+                  <li>Another way to reference an element is to use its tag and any attribute of the element within square brackets: e.g. <code>$("input[name="firstname"]")</code> would reference the following HTML element: <code>&lt;input type=text name=firstname&gt;</code></li>
+
+                  <h5 class="mt-4">Adding Elements:</h5>
+                  <li>To create an element in jQuery use <code>$("&lt;<span class="input">tag</span>&gt;")</code>, e.g. <code>$("&lt;h1&gt;")</code> to do what vanilla JS does with <code>document.createElement("h1")</code>.</li>
+                  <li>Another way to add an element is to use <code>.append("<span class="input">The element as it would appear in HTML</span>")</code>, e.g. <code>.append("&lt;p class="m-5" id="newEl"&gt;This element was created with .append&lt;/p&gt;")</code></li>
+                  
+                  <h5 class="mt-4">Altering Elements:</h5>
+                  <li>To replicate vanilla JS <code>.textContent = "<span class="input">string</span>"</code>, i.e. alter text content of elements use <code>.text("<span class="input">string</span>")</code>.</li>
+                  <li>Use <code>.append(<span class="input">element</span>)</code> to append elements to an object in the DOM (equivalent of vanilla JS <code>.appendChild(<span class="input">element</span>)</code>).</li>
+                  <li>Editing attributes works similarly: there is <code>.attr("<span class="input">attribute</span>", "<span class="input">value</span>")</code> or for specifically adding a class, you can use <code>.addClass("<span class="input">class</span>")</code>.</li>
+                  <li>For adding styling specifically, you can use <code>.css("<span class="input">style</span>", "<span class="input">value</span>")</code>.
+                     <ul>
+                        <li>For altering multiple CSS styles at a time, you can do it as if it were an object, e.g.:
+                           <div class="code block m-2">
+                              <pre><span class="input">element</span>.css({</pre>
+                              <pre>      "background-color": "black",</pre>
+                              <pre>      "color": "red",</pre>
+                              <pre>      "font-size": "30rem"</pre>
+                              <pre>})</pre>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <h5 class="mt-4">Removing Elements:</h5>
+                  <li>To remove an element use <code><span class="input">element</span>.remove()</code>. It removes all matching elements when searching by tag or class, but only the first if searching by ID.</li>
+                  <li>Using <code><span class="input">element</span>.hide()</code> is a quick way to hide the element.</li>
+                  
+                  <div class="border border-bottom my-3"></div>
+
+                  <button type="button" class="btn btn-success btn-sm me-1 my-2" onclick="jqueryaddele()">Demo code</button>
+                  <button type="button" class="btn btn-danger btn-sm me-2" onclick="jqueryundoaddele()">Revert</button>
+
+                  <div class="code block m-2">
+                        <pre>var placeToAddTheNewElement = $("#jqueryaddhere");</pre>
+                        <pre>var newBulletPoint = $("&lt;li&gt;");</pre>
+                        <pre>newBulletPoint.text("This element was created with jQuery.");</pre>
+                        <pre>newBulletPoint.css("color", "yellow");</pre>
+                        <pre>newBulletPoint.attr("id", "jqueryaddedelement");</pre>
+                        <pre>placeToAddTheNewElement.append(newBulletPoint)</pre>
+                  </div>
+                  <ul id="jqueryaddhere"></ul>
+               </ul>
+            </div>
+            <div class="card my-2" id="jquerydom">
+               <h3 class="py-2 text-center">jQuery DOM</h3>
+               <ul>
+                  <li>To access the children of an element, use <code><span class="input">element</span>.children()</code>. The children of an element can be manipulated by just chaining on arguments, e.g. <code><span class="input">element</span>.children().css("color", "yellow")</code>, which would change all the children to font colour yellow.</li>
+                  <li>To target a specific child, use <code><span class="input">element</span>.children().eq(<span class="input">index</span>)</code>.
+                     <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="jqueryDOMex()">Demo code</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="undojqueryDOMex()">Revert</button>
+
+                     <div class="code block m-2">
+                        <pre>var jqueryDOMsect = $("#jquerydom")</pre>
+                        <span class="comment">The element with ID #jquerydom is this card. So the child's child is the bullet point above.</span>
+                        <pre>jqueryDOMsect.children().children().eq(1).addClass("yellowtext")</pre>
+                     </div>
+                  </li>
+                  <li>If you know the tag/class/ID, you can also use that with <code><span class="input">element</span>.children(<span class="input">element</span>)</code> such as <code><span class="input">element</span>.children("h3")</code>.</li>
+                  <li>To access the parent of an element, use <code>.parent()</code>.</li>
+                  <li>To access the sibling of an element, you can use <code>.siblings()</code>, or <code>.next()</code> to find the next sibling and <pre class="code">.prev()</pre> to find the previous one.</li>
+               </ul>
+            </div>
+         </div>      
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+            <div class="card my-2" id="jqueryforms">
+               <h3 class="py-2 text-center">jQuery Forms</h3>
+               <ul>
+                  <li>Use <code>event.preventDefault()</code> with forms, as before, to prevent it from refreshing the page.</li>
+                  <li>With checkbox forms, <code>&lt;input type=checkbox value=<span class="input">value</span>&gt;</code>, the way to select all checked options is <code>$("input:checked")</code></li>
+                  <li>The <code>$.each(<span class="input">array</span>, <span class="input">function</span>)</code> is an equivalent to the "for" loop, allowing you to iterate through each item of an array and apply a function to them.</li>
+                  <li>Within the <code>$.each()</code>, using <code>$(this)</code> references the current value the loop is iterating over.</li>
+                  <div class="row align-items-center m-2">
+                     <div class="col-md-2 d-flex flex-column" id="jqueryformexample">
+                        <h6 class="mb-2"><span class="badge bg-success">Demo Form</span></h6>
+                        <div class="d-flex align-items-center my-1">
+                           <input type="checkbox" value="Apples" id="Apples">
+                           <h6 class="m-0"><div class="badge bg-secondary mx-2">Apples</div>
+                        </div>
+                        <div class="d-flex align-items-center my-1">
+                           <input type="checkbox" value="Bananas" id="Bananas">
+                           <h6 class="m-0"><div class="badge bg-secondary mx-2">Bananas</div>
+                        </div>
+                        <div class="d-flex align-items-center my-1">
+                           <input type="checkbox" value="Oranges" id="Oranges">
+                           <h6 class="m-0"><div class="badge bg-secondary mx-2">Oranges</div>
+                        </div>
+                        <div class="d-flex align-items-center my-1">
+                           <input type="checkbox" value="Pears" id="Pears">
+                           <h6 class="m-0"><div class="badge bg-secondary mx-2">Pears</div>
+                        </div>
+                        <div class="d-flex align-items-center my-1">
+                           <input type="checkbox" value="Grapes" id="Grapes">
+                           <h6 class="m-0"><div class="badge bg-secondary mx-2">Grapes</div>
+                        </div>
+                        <h6 class="m-0"><div class="badge bg-primary my-2" id="submit" style="cursor: pointer;">Submit</div>
+                        <div>
+                           <span class="comment" id="checkboxes"></span>
+                        </div>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="code block m-2">
+                           <pre>function handleFormSubmit(){</pre>
+                           <pre>      var checkedEl = $("input:checked")</pre>
+                           <pre>      var selected = []</pre>
+                           <pre>      $.each(checkedEl, function(){</pre>
+                           <pre>            selected.push($(this).val());</pre>
+                           <pre>            console.log(selected)</pre>
+                           <pre>      })</pre>
+                           <pre>      $("#checkboxes").text(`Fruits: ${selected.join(", ")}`)</pre>
+                           <pre>      $("input[type='checkbox']").prop("checked", false)</pre>
+                           <pre>}</pre>
+                           <br>
+                           <pre>$("#submit").on("click", handleFormSubmit)</pre>
+                        </div>
+                     </div>
+                  </div>
+                  <li>For <code>type=text</code> forms, data can be submitted with the event type <code>submit</code>, as opposed to <code>click</code>.</li>
+                  <form id="jquerytypetext">
+                     <input class="m-2 w-75" type="text" id="textfield" placeholder="Enter text here.">
+                  </form>
+                  <button type="button" class="btn btn-danger btn-sm mx-2" onclick="cleartypetextformList()">Revert</button>
+
+                  <div class="m-2">
+                     <ul id="jquerytextformlist">
+                     </ul>
+                  </div>
+
+                  <div class="code block m-2">
+                     <pre>var formEl = $("#jquerytypetext")</pre>
+                     <pre>var textfield = $("#textfield")</pre>
+                     <pre>var putItemshere = $("#jquerytextformlist")</pre>
+                     <br>
+                     <pre>function typetextformSubmit(event) {</pre>
+                     <pre>      event.preventDefault();</pre>
+                     <pre>      var newItem = (textfield.val());</pre>
+                     <pre>      textfield.val("");</pre>
+                     <br>
+                     <pre>      if (!newItem) {return;}</pre><span class="comment">// Prevents blank text from being entered.</span>
+                     <br>
+                     <pre>      var newItemEl = $("&lt;li&gt;");</pre>
+                     <pre>      newItemEl.text(newItem);</pre>
+                     <pre>      newItemEl.addClass("toremove")</pre>
+                     <pre>      putItemshere.append(newItemEl);</pre>
+                     <pre>}</pre>
+                     <br>
+                     <pre>formEl.on("submit", typetextformSubmit)</pre>
+                  </div>
+               </ul>
+            </div>
+            <div class="card my-2" id="jqueryevents">
+               <h3 class="py-2 text-center">jQuery Events</h3>
+               <ul>
+                  <li>To add an event listener to jQuery use <code><span class="input">element</span>.on("<span class="input">event type</span>", <span class="input">function</span>)</code>- this is the equivalent to vanilla JS <code><span class="input">element</span>.addEventListener("<span class="input">event type</span>", <span class="input">function</span>)</code>.</li>
+                  <li>Besides the syntax change, the click events work the same as in vanilla JS.</li>
+                  
+                  <h5 class="mt-4">Event Delegation:</h5>
+                  <li>Elements that are created with JS don't exist in the DOM on page load (they are loaded immediately after). This means that they can't be targeted with event listeners. The way around this is to use event delegation. This targets the parent element, with a secondary condition of specifying the element within it.
+                     <div class="code block m-2">
+                        <pre>EDparentEl.on("click", ".delete-item-btn", removeBtnED)</pre>
+                        <span class="comment">// [1] The line above uses event delegation - it targets the parent element, with a selector of the class of the button we click, and a function that deletes the button. This works.</span>
+                        <pre>DelItemBtn.on("click", removeBtnDefault)</pre>
+                        <span class="comment">// [2] This line uses a regular function, attached directly to the newly-created button element. This does not work.</span>
+                     </div>
+                  </li>
+
+                  <button type="button" class="btn btn-success btn-sm me-1 my-2" onclick="EventDelegation()">Build Elements</button>
+                  <button type="button" class="btn btn-outline-light btn-sm me-1 my-2" onclick="JQEDon()" id="EDon">Use event delegation [1]</button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm me-1 my-2" onclick="JQEDoff()" id="EDoff">Use default event listener [2]</button>
+                  <div class="container" id="eventdel"></div>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+            <div class="card my-2" id="apiscoping">
+               <h3 class="py-2 text-center">Scoping</h3>
+               <ul>
+                  <li>Same as JavaScript, a global variable is one set outside of a function/method, a local variable is one set inside a function. Also as before, a shadowed variable is when a variable is declared inside a function with the same name as a global variable.</li>
+                  <li>The <code>.this</code> refers to its parent object/element. If it inside a nested function (a function inside another function) it'll return the <code>window</code> object as it cannot see a parent object - it defaults to the window.</li>
+                  <li>Local scope variables take priority over global scope variables.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="jqueryuiwidgets">
+               <h3 class="py-2 text-center">jQuery UI Widgets</h3>
+               <ul>
+                  <li>jQuery UI is a content library like bootstrap that gives useful things like dialogue boxes. It can be accessed at <a href="https://jqueryui.com/">jqueryui.com</a>.</li>
+                  <li>This is an example of a jQuery UI widget:
+                     <br><div class="p-3 m-2 rounded border border-light d-inline-block"><h6 class="m-0">Date: <input type="text" id="datepicker"></h6></div>
+                  </li>
+                  <li>To use jQuery UI, you need the following tags, one CSS library two JS tags: one for jQuery and one of jQuery UI.</li>
+                  <div class="code block m-2">
+                     <pre>&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"&gt;</pre>
+                     <pre>&lt;script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"&gt;&lt;/script&gt;</pre>
+                     <span class="comment">// The following tag is for jQuery, so don't include if it's already there.</span>
+                     <pre>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+                  </div>
+               </ul>
+            </div>
+            <div class="card my-2" id="jqueryuiinteractions">
+               <h3 class="py-2 text-center">jQuery UI Interactions</h3>
+               <ul id="sortable" style="cursor: pointer;">
+                  <li>NGL could not be bothered to make notes for this it's all in the <a href="https://jqueryui.com/draggable/">documentation</a> pls just read that 👍.</li>
+                  <li>But the idea is that using the jQuery UI library's interactions set,</li>
+                  <li>You can apply simple interactions to premade elements.</li>
+                  <li>For example:</li>
+                  <li>These bullet points have the <code>.sortable()</code> function applied to them,</li>
+                  <li>So you can drag and drop them into a different order!</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="dayjsformat">
+               <h3 class="py-2 text-center">Day.js Format</h3>
+               <ul>
+                  <li>Day.js is another third party library (<a href="https://cdnjs.com/libraries/dayjs">CDN available here</a>) that deals with specifically enhancing or changing the way in which dates and times are displayed.</li>
+                  <li>To create a timestamp for right now use: <code>dayjs().format(<span class="input">format</span>)</code>, where the format can be obtained <a href="https://day.js.org/docs/en/display/format">here</a>. Writing out <code>dayjs().format(`[The time is] HH:mm [and the date is] DD-MM-YYYY`)</code> would give: <code id="rightnow"></code>.</li>
+                  <li>You can also parse dates in one format (e.g. 03 January 2024) and convert it into a new format (e.g. 03/01/2024): <code>dayjs(<span class="input">inputDate</span>).format("<span class="input">newFormat</span>")</code>. The following code will switch today's date from shorthand to fully written out.
+                     <br><button type="button" class="btn btn-success btn-sm ms-2 me-1 my-2" onclick="changeformat()">Demo code</button>
+                     <button type="button" class="btn btn-danger btn-sm me-2" onclick="undochangeformat()">Revert</button>
+                     <code id="changeformatdayjs"></code>
+                  </li>
+                  <li>You can calculate the difference between two dates using <code>dayjs(<span class="input">date1</span>).diff(dayjs(<span class="input">date2</span>))</code>, by default it returns the difference in milliseconds.  You can also calculate in different units (e.g. days, weeks, months) by incuding it as the second argument. Note that the default behaviour does not include partial weeks in its calculation - this can be changed by including <code>true</code> as the third argument.
+                     <div class="code block m-2">
+                        <pre>today.diff(dayjs("2024-01-01"), "days")</pre>
+                        <span class="comment" id="firstdiff"></span>
+                        <pre>dayjs().diff(dayjs("2023-06-31"), "weeks", true)</pre>
+                        <span class="comment" id="secondiff"></span>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="card my-2" id="fetch">
+               <h3 class="py-2 text-center">Fetch</h3>
+               <ul>
+                  <li>Server APIs are ways of grabbing data from repositories hosted by other places. The syntax of a query URL will differ from provider to provider.</li>
+                  <li>Using the <code>.fetch(<span class="input">queryURL</span>)</code> method, the data can be retrieved from the server API. It will come in a <code>.json</code> file format (or an <code>.xml</code>).
+                     <div class="code block m-2">
+                        <pre>fetch(<span class="input">queryURL</span>)</pre>
+                        <pre>      .then(function (response) {</pre>
+                        <pre>            return response.json();</pre>
+                        <pre>      }).then(function (data){</pre>
+                        <pre>            <span class="input">what you want to do with the data</span>;</pre>
+                        <pre>      });</pre>
+                     </div>
+                  </li>
+                  <li>Because <code>fetch</code> gets data from an external site, it is asynchronous. This means the response from <code>fetch</code> won't necessarily arrive before other lines of JavaScript are run.
+                     <div class="code block m-2">   
+                        <pre>fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")</pre>
+                        <pre>.then(function (response) {</pre>
+                        <pre>      return response.json();</pre>
+                        <pre>}).then(function (data){</pre>
+                        <pre>      pokename.text(data.species.name)</pre>
+                        <pre>      pokeimg.attr("src", data.sprites.front_default)</pre>
+                        <pre>});</pre>
+                     </div>
+                  </li>
+               </ul>
+               <div class="container m-2 mb-4 d-flex flex-column align-items-center">
+                     <form id="pokeform">
+                        <input type="text" id="pokeinput" placeholder="Search for a Pokémon.">
+                     </form>
+                     <div class="card mt-2" style="width: 20rem;">
+                        <img src="" class="card-img-top px-5" id="pokeimg">
+                        <div class="card-body bg-secondary rounded">
+                           <h5 class="card-title text-center" id="pokename" style="text-transform: capitalize;">Pokémon Name</h5>
+                           <div class="m-2 text-center">
+                              <span class="badge m-2" id="type1"></span>
+                              <span class="badge m-2" id="type2"></span>
+                           </div>
+                           <div class="row p-1 d-flex justify-content-evenly">
+                              <div class="col-12 col-lg-4 badge p-2" id="move1" style="text-transform: capitalize;">Move1</div>
+                              <div class="col-12 col-lg-4 badge p-2" id="move2" style="text-transform: capitalize;">Move2</div>
+                           </div>
+                           <div class="row p-1 d-flex justify-content-evenly">
+                              <div class="col-12 col-lg-4 badge p-2" id="move3" style="text-transform: capitalize;">Move3</div>
+                              <div class="col-12 col-lg-4 badge p-2" id="move4" style="text-transform: capitalize;">Move4</div>
+                           </div>
+                        </div>
+                     </div>
+               </div>
+               <ul>
+                  <li>Often, server APIs require an API key to validate the data. This would just go onto the end of the <code><span class="input">queryURL</span></code>, e.g. <code>fetch("https://api.giphy.com/v1/gifs/trending?api_key=<span class="input">api key</span>")</code>.</li>
+                  <form id="giphysearch">
+                     <input class="my-3" type="text" id="gifput" placeholder="Search for a GIF.">
+                  </form>
+                  <div class="d-flex flex-nowrap" id="giphyapi"></div>
+               </ul>
+         </div>
+         </div>
+      </div>
+   </div>
+
    <div class="container-fluid" id="es6nodejsnotes">
       <h1 class="py-4 text-center">ES6 and Node.js</h1>
       <div class="row justify-content-evenly">
@@ -497,7 +1092,6 @@
                <h3 class="text-center py-2">"Let" & "Const"</h3>
                <ul>
                   <li>A commonly accepted practice is to use <code>const</code> as much as possible, and <code>let</code> in the case of loops and reassignment. Generally, <code>var</code> can be avoided outside of legacy code.</li>
-                  <li><code>const</code> can be used for values which will not be reassigned. <code>var</code> would be for values that you do want to update at any point in the code.</li>
                   <li>If the <code>const</code> is an <strong>array</strong>, values can be pushed to it - it can be added onto, just not redefined. <code>const</code> means <strong>constant reference</strong>, not constant value.</li>
                   <li>Likewise, with <strong>objects</strong>, properties of the object can be redefined/updated - but the object itself cannot be redefined.</li>
                   <li>While arrays and objects defined with <code>const</code> can be <strong>modified</strong>, they cannot be <strong>reassigned</strong>.</li>
@@ -632,10 +1226,16 @@
       </div>
    </div>
 
-   <!-- jQuery -->
+   <!-- jQuery & jQuery UI script tags -->
    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+   <!-- Day.js tags -->
+   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+   <script>dayjs.extend(window.dayjs_plugin_utc)</script>
    <!-- Bootstrap JS plugin -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   <script src="./scripts.js"></script>
+   <!-- Custom JS link -->
+   <script src="./js/scripts.js"></script>
 </body>
 </html>
