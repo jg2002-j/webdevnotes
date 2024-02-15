@@ -31,6 +31,10 @@ h3{
       font-family: 'Cabinet Grotesk', sans-serif;
 }
 
+.navbar-toggler{
+      border: 0;
+}
+
 /* ----------------------------- */
 
 code, .input{
@@ -82,9 +86,14 @@ code, .input{
       text-wrap: wrap;
 }
 
+/* ----------------------------- */
 
 :target{animation: target-fade 2s;}
 @keyframes target-fade {
 	from {background-color: rgba(255, 255, 255, 0.4);}
 	to { background-color: transparent; }
+}
+
+.navbar *{
+      transition: 0.75s ease;
 }

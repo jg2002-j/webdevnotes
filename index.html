@@ -22,12 +22,14 @@
       <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   <nav class="navbar navbar-expand bg-body-tertiary sticky-top rounded-top-0 rounded">
+   <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top rounded-top-0 rounded">
       <div class="container-fluid">
          <a class="navbar-brand" href="#">Web Development Notes</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+         <button class="navbar-toggler btn btn-small px-2 py-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+         </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto">
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#jsnotes" role="button" data-bs-toggle="dropdown" aria-expanded="false">JavaScript</a>
                   <ul class="dropdown-menu">
@@ -83,6 +85,7 @@
                      <li><a class="dropdown-item btn btn-sm rounded" href="#letconst">"Let" & "Const"</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#functionalloops">Functional Loops</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#nodebasics">Node.js Basics</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#npmjs">Node Package Manager</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#nodefs">Node File System</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#modularisation">Modularisation</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
@@ -92,10 +95,6 @@
                   </ul>
                </li>
             </ul>
-            <form class="d-flex" role="search">
-               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
          </div>
       </div>
    </nav>
@@ -499,7 +498,7 @@
    <div class="container-fluid" id="webapis">
       <h1 class="py-4 text-center">Web APIs</h1>
       <div class="row justify-content-evenly">
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="usefulapi">
                <h3 class="text-center py-2">Useful Info</h3>
                <ul>
@@ -585,7 +584,7 @@
                </ul>
             </div>
          </div>
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
                <div class="card my-2" id="eventlisteners">
                   <h3 class="text-center py-2">Event Listeners</h3>
                   <ul>
@@ -674,7 +673,7 @@
                   </ul>
                </div>
          </div>
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="timerinterval">
                <h3 class="text-center py-2">Timers and Intervals</h3>
                <ul>
@@ -768,7 +767,7 @@
    <div class="container-fluid" id="thirdpartyserverapis">
       <h1 class="py-4 text-center">3rd Party & Server APIs</h1>
       <div class="row justify-content-evenly">
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="jqueryel">
                <h3 class="py-2 text-center">jQuery Elements</h3>
                <ul>
@@ -843,7 +842,7 @@
                </ul>
             </div>
          </div>      
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="jqueryforms">
                <h3 class="py-2 text-center">jQuery Forms</h3>
                <ul>
@@ -952,7 +951,7 @@
                </ul>
             </div>
          </div>
-         <div class="row px-3 col-xl-12 col-xxl-4 d-flex align-content-start">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="apiscoping">
                <h3 class="py-2 text-center">Scoping</h3>
                <ul>
@@ -1081,6 +1080,7 @@
                   <li>If there is only one expression inside the function, the <code>{}</code> can be omitted like so: <code>var <span class="input">functionName</span> = <span class="input">parameter</span> => <span class="input">expression</span></code>. If the purpose of the function is to just <code>return</code> a value, this can be taken one step further, and <code>return</code> can be removed altogther, e.g. <code>var multiplyNums = (a,b) => a*b</code> - here there is no need to type <code>return a*b</code>.</li>
                   <li>Arrow functions bind the <code>this</code> keyword to the object it's created inside of. As a result <strong>avoid using arrow functions for object methods</strong> and instead use a default function.</li>
                   <li>In regular functions the <code>this</code> keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions, the <code>this</code> keyword always represents the object that defined the arrow function.</li>
+                  <li id="ternaryop">JavaScript also has a ternary operator <code>?</code> which takes in three parameters: <code><span class="input">condition</span> ? <span class="input">expression if condition is true</span> : <span class="input">expression if condition is false</span></code>, e.g. <code>console.log(1 == 1 ? "True" : "False")</code> would print <code>True</code>.</li>
                </ul>
             </div>
             <div class="card my-2" id="letconst">
@@ -1132,17 +1132,23 @@
                <h3 class="text-center py-2">Node.js Basics</h3>
                <ul>
                   <li><a class="" target="_blank" href="https://nodejs.org/en">Node.js</a> is a downloadable program for JavaScript code to be run (outside of a browser) in a terminal, to allow for asset compilation, scripting, monitoring and as the basis for web servers.</li>
-                  <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
-                  <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
-                  <ul>
-                        <li>To use npmjs you have to set up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal.</li>
-                        <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>.</li>
-                  </ul>
                   <li>Pathing is integral to using node.js, using <code>pwd</code> inside the VSCode terminal will show the current path.</li>
                   <li>Once Node.js is installed, type <code>node <span class="input">filename.js</span></code> in the terminal to run a JavaScript file with node.</li>
                   <li>In the browser, <code>setTimeout</code> is a property of the <code>window</code> object. In node, it belongs to a special <code>timeout</code> object</li>
                   <li>Running <code>console.log(process.argv);</code> returns an array of command line arguments. Those items can be accessed via index number, e.g. <code>console.log(process.argv[<span class="input">2</span>])</code>. This just allows you to get inputs from what is entered into the command line, if you wanted to use that in the code (for example to verify user input).</li>
-                  <li id="ternaryop">JavaScript also has a ternary operator <code>?</code> which takes in three parameters: <code><span class="input">condition</span> ? <span class="input">expression if condition is true</span> : <span class="input">expression if condition is false</span></code>, e.g. <code>console.log(1 == 1 ? "True" : "False")</code> would print <code>True</code>.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="npmjs">
+               <h3 class="text-center py-2">Node Package Manager</h3>
+               <ul>
+                  <li>Using <code>require()</code>, node can pull in other packages similar to how a CDN link works.</li>
+                  <li>Node comes with some inbuilt packages, but the third party packages can be obtained from <a class="" target="_blank" href="https://www.npmjs.com/">npmjs.com</a>.</li>
+                  <ol>
+                        <li>The first step to use npmjs is setting up the <code>package.json</code> by running <code>npm init -y</code> in the VSCode terminal. (Side note: In the <code>package.json</code> you can create custom scripts to essentially create shortcuts for large lines you want to put in the terminal.)</li>
+                        <li>After the <code>package.json</code> is created, the third party packages can be installed with <code>npm i <span class="input">packagename</span>@^<span class="input">version</span></code>. Packages can be found on npmjs.com, e.g. <a target="_blank" href="https://www.npmjs.com/package/inquirer">Inquirer</a> which would be installed with <code>npm i inquirer@^8.0.0</code>.</li>
+                        <li>This will create a <code>node_modules</code> folder.</li>
+                        <li>The JavaScript file then needs to include the newly-downloaded package as a dependency with <code>const <span class="input">packageName</span> = require("<span class="input">packageName</span>");</code>, e.g. <code>const inquirer = require("inquirer");</code></li>
+                  </ol>
                </ul>
             </div>
             <div class="card my-2" id="nodefs">
@@ -1177,6 +1183,7 @@
                         <pre>module.exports = {</pre>
                         <br><pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
                         <br><pre>   <span class="input">keyName</span>: <span class="input">variable/method from the file</span>,</pre>
+                        <br><span class="comment">// Repeat as necessary...</span>
                         <br><pre>};</pre>
                      </div>
                   </li>
@@ -1186,12 +1193,6 @@
                      </div>
                   </li>
                   <li>These "imports" can then be called in the regular way of accessing an object's properties/methods.</li>
-               </ul>
-            </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
-               <ul>
-                  <li></li>
                </ul>
             </div>
          </div>
