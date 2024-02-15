@@ -88,7 +88,7 @@
                      <li><a class="dropdown-item btn btn-sm rounded" href="#npmjs">Node Package Manager</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#nodefs">Node File System</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#modularisation">Modularisation</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#restspread">"Rest" & "Spread"</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
@@ -470,7 +470,9 @@
                <h3 class="text-center py-2">Iterative Methods</h3>
                <ul>
                   <li><code><span class="input">arrayName</span>.forEach()</code> iterates through each item of an array and applies an action (defined within the <code>()</code>) to it. When used with a function, this removes the need to write a <code>for</code> loop, as you can just use <code><span class="input">arrayName</span>.forEach(<span class="input">functionName</span>)</code> instead.</li>
-                  <li><code><span class="input">arrayName</code>.map()</code> puts all items of an array into a new array (when used with a new array name). Again, when used with a function, it allows you to map out a new array with ease. e.g. <code>var newArray = oldArray.map(functionMultiply)</code>.</li>
+                  <li><code><span class="input">arrayName</span>.map()</code> puts all items of an array into a new array (when used with a new array name). Again, when used with a function, it allows you to map out a new array with ease. e.g. <code>var newArray = oldArray.map(functionMultiply)</code>.</li>
+                  <li>the <code>for... of...</code> loop can be used to iterate through an array. It should be used in preference to <code>forEach</code>.</li>
+                  <li>This is useful when used with <code>document.querySelectorAll()</code>, for instance, which generates an array (of objects).</li>
                </ul>
             </div>
             <div class="card my-2" id="filtering">
@@ -1196,12 +1198,12 @@
                </ul>
             </div>
          </div>
-
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
+            <div class="card my-2" id="restspread">
+               <h3 class="text-center py-2">"Rest" & "Spread"</h3>
                <ul>
-                  <li></li>
+                  
+
                </ul>
             </div>
             <div class="card my-2" id="title">
