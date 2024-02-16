@@ -88,8 +88,8 @@
                      <li><a class="dropdown-item btn btn-sm rounded" href="#npmjs">Node Package Manager</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#nodefs">Node File System</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#modularisation">Modularisation</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#restspread">"Rest" & "Spread"</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#restspreadreduce">"Rest", "Spread" & "Reduce"</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#destructuring">Destructuring</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#title">Title</a></li>
                   </ul>
@@ -1199,18 +1199,85 @@
             </div>
          </div>
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-            <div class="card my-2" id="restspread">
-               <h3 class="text-center py-2">"Rest" & "Spread"</h3>
+            <div class="card my-2" id="restspreadreduce">
+               <h3 class="text-center py-2">"Rest", "Spread" & "Reduce"</h3>
                <ul>
-                  
-
+                  <li>The <code>rest</code> operator allows you to not specify the number of input parameters to a function. Its syntax is <code>function <span class="input">functionName</span>(...<span class="input">name</span>)</code>, where <code><span class="input">name</span></code> refers to the name of the array of input parameters. e.g.:
+                     <div class="code block m-2">
+                        <pre>function add(...nums){</pre>
+                        <br><pre>   let sum = 0;</pre>
+                        <br><pre>   for (const num of nums) {</pre>
+                        <br><pre>      sum += num</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>   return sum</pre>
+                        <br><pre>}</pre>
+                     </div>
+                     This example would add all of the input parameters that the <code>add</code> function is run with. The inputs are listed as an array, so running <code>add(1,2,3,4,5)</code> would have <code>nums</code> return as <code>[1,2,3,4,5]</code>, and the function <code>add</code> would return 1+2+3+4+5 or <code>15</code>.
+                  </li>
+                  <li>The <code>spread</code> operator is a way to combine two different arrays, instead of nesting one inside another. You would use it as <code>const <span class="input">arrayOne</span> = [...<span class="input">arrayTwo</span>, "example value"]</code>, e.g.:
+                     <div class="code block m-2">
+                        <pre>const fruits = ["apple", "banana", "orange"];</pre>
+                        <br><pre>const foods = [...fruits, "potato", "carrot", "lettuce"];</pre>
+                     </div>
+                     The result of this would display all the values of <code>fruits</code> inside the <code>foods</code> array too.
+                  </li>
+                  <li>The <code>spread</code> operator can also be used to add values to a new version of an object (or merge two objects). For example if you had an object with set values already, and wanted to add a few already-defined variables to it without using <code><span class="input">objectName</span>.<span class="input">newKey</span> = <span class="input">value</span></code>, e.g.:
+                     <div class="code block m-2">
+                        <pre>const room = {</pre>
+                        <br><pre>      height: 200,</pre>
+                        <br><pre>      depth: 400,</pre>
+                        <br><pre>      chairs: 3,</pre>
+                        <br><pre>   };</pre>
+                        <br>
+                        <br><pre>const desks = 3;</pre>
+                        <br><pre>const lights = 2;</pre>
+                        <br><pre>const painted = "yes";</pre>
+                        <br>
+                        <br><pre>const roomData = {desks, lights, painted, ...room}</pre>
+                        <br><pre>const roomData = {</pre>
+                        <br><pre>      height: 200,</pre>
+                        <br><pre>      depth: 400,</pre>
+                        <br><pre>      chairs: 3,</pre>
+                        <br><pre>      desks: 3,</pre>
+                        <br><pre>      lights: 2,</pre>
+                        <br><pre>      painted: "yes",</pre>
+                        <br><pre>   };</pre>
+                     </div>
+                  </li>
+                  <li>Finally, the <code>reduce</code> method iterates through all values of an array and "reduces" them into a single value. It works in a similar way to the <code>forEach()</code> method, but collects all the iterated results into one value. Its syntax is <code>.reduce(<span class="input">function</span>, <span class="input">initialValue</span>)</code>, where the <code>initial value</code> is an initial value to start from, if left blank defaults to the first item in the array (index 0). The <code>function</code> must refer to an <code>accumulator</code> value and a <code>currentValue</code> value as its input paramters. e.g.:
+                     <div class="code block m-2">
+                        <pre>const nums = [1, 4, 7];</pre>
+                        <br>
+                        <br><pre>const numsTotal = nums.reduce((accumulator, currentValue) => {</pre>
+                        <br><pre>   accumulator + currentValue;</pre>
+                        <br><pre>},0)</pre>
+                     </div>
+                     This would return a value of 1+4+7 or <code>12</code>. The function is written directly into the <code>reduce</code> arguments in this example.
+                  </li>
                </ul>
             </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
+            <div class="card my-2" id="destructuring">
+               <h3 class="text-center py-2">Destructuring</h3>
                <ul>
-                  <li></li>
-               </ul>
+                  <li>Destructuring is a way to separate an objects properties into individual values, a quicker way of writing out <code>const <span class="input">variableName</span> = <span class="input">objectName</span>.<span class="input">keyName</span></code> however many times for each property within the object.</li>
+                  <li>Its syntax is <code>const {<span class="input">keyName</span>: <span class="input">optionalVariableName</span>, <span class="input">key2Name</span>: <span class="input">optionalVariable2Name</span>} = <span class="input">objectName</span></code>. It then defines a new <code>const</code> as <code>keyName</code> with the value <code><span class="input">objectName</span>.<span class="input">keyName</span></code> and likewise for <code>key2Name</code>.</li>
+                  <div class="code block m-2">
+                     <pre>const jaime = {</pre>
+                     <br><pre>   name: 'Jaime Lannister',</pre>
+                     <br><pre>};</pre>
+                     <br>
+                     <br><pre>const { name: jaimeName } = jaime;</pre><span class="comment"> // A new variable "jaimename" is defined here with the value "jaime.name"</span>
+                     <br><pre>console.log(jaimeName); // prints "Jaime Lannister"</pre>
+                  </div>
+                  <li>Object destructuring will look for the keyname that matches the thing you type - hence the need to specify a second variable name if you want to name it something other than the keyname. Array destructuring won't look for a matching value to what you type, it only goes by the index number.</li>
+                  <li>This can also be done to arrays e.g. <code>const [<span class="input">a</span>, <span class="input">b</span>, <span class="input">c</span>] = <span class="input">arrayName</span></code>.</li>
+                  <li>Another way to use this is in function definitions. The input parameter would be destructured from an object to the format above.
+                     <div class="code block m-2">
+                        <pre>const betterLogCharacter = ({ name, parents }) =></pre>
+                        <br><pre>   console.log(`${name}'s parents are: ${parents[0]} and ${parents[1]}.`);</pre>
+                     </div>
+                     Instead of writing <code>(object)</code>(object) as the function's input parameter, it has been destructured to <code>{name, parents}</code> i.e. the function is now searching for input parameters matching <code>object.name</code> and <code>object.parents</code>.
+                  </li>
             </div>
             <div class="card my-2" id="title">
                <h3 class="text-center py-2">Title</h3>
