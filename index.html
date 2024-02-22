@@ -93,18 +93,18 @@
                   </ul>
                </li>
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#newcategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">New Category</a>
+                  <a class="nav-link dropdown-toggle" href="#oop" role="button" data-bs-toggle="dropdown" aria-expanded="false">Object-Oriented Programming</a>
                   <ul class="dropdown-menu">
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#constructors">Constructors</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#prototypes">Prototypes</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
                   </ul>
                </li>
             </ul>
@@ -1297,7 +1297,127 @@
       </div>
    </div>
 
-   <div class="container-fluid" id="newcategory">
+   <div class="container-fluid" id="oop">
+      <h1 class="py-4 text-center">Object-Oriented Programming</h1>
+      <div class="row justify-content-evenly">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="constructors">
+               <h3 class="text-center py-2">Constructors</h3>
+               <ul>
+                  <li>Constructor functions are used to create multiple different objects from a blueprint.</li>
+                  <li>Typically, constructors are named with a capital letter at the start - this is just a naming convention it isn't required.</li>
+                  <li>The syntax for a constructor function is as follows:
+                     <div class="code block m-2">
+                        <pre>function <span class="input">ConstructorName</span>(<span class="input">parameters</span>) {</pre>
+                        <br><pre>   this.<span class="input">keyName</span> = <span class="input">value</span></pre>
+                        <br><span class="comment">// If you want an object method it would be written as follows:</span>
+                        <br><pre>   this.<span class="input">functionName</span> = function(){}</pre>
+                     </div>
+                  </li>
+                  <li>The constructor function can be invoked by using <code>const <span class="input">objectName</span> = new <span class="input">ConstructorName</span>(<span class="input">parameters</span>)</code>.</li>
+                  <li>Once the object is created, it can be referenced and manipulated as usual.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="prototypes">
+               <h3 class="text-center py-2">Prototypes</h3>
+               <ul>
+                  <li>Objects, arrays and primitive data types all have a <code>.prototype</code>.</li>
+                  <li>The <code>.prototype</code> has methods and properties attached to it, but the methods declared on the prototype are declared once and memory is allocated for them once, despite all objects (that are made from it) having access to them.</li>
+                  <li>Instance methods only exist on a particular instance of an object, prototype methods are on all instances.</li>
+                  <li>Examples of this include <code>.forEach()</code>, <code>.toLowercase()</code> or <code>.push()</code> - which are available to all arrays, strings and arrays universally through the <code>.prototype</code>.</li>
+                  <li>This adds an alternative to using constructor functions, as new methods can instead be added onto the <code>.prototype</code> to be accessed wherever, e.g.:
+                     <div class="code block m-2">
+                        <pre><span class="input">Movie</span>.prototype.<span class="input">logInfo</span> = function() {</pre>
+                        <br><pre>   <span class="input">console.log(`${this.title} was released in ${this.releaseYear}`)</span>;</pre>
+                        <br><pre>};</pre>
+                        <br><pre>const <span class="input">theShining</span> = new <span class="input">Movie</span>("<span class="input">The Shining ", 1980</span>)</pre>
+                        <br><pre><span class="input">theShining</span>.<span class="input">logInfo</span>();</pre>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="testdrivendevelopment">
+               <h3 class="text-center py-2">Test-Driven Development</h3>
+               <ul>
+                  <li><a href="https://www.npmjs.com/package/jest">Jest</a> is a npm package that allows automated testing. You can create a test to describe what something should do, give an input and expected result, then run the process, and check that the result from running it matches the expected result.</li>
+                  <li>After installing jest with <code>npm install jest</code> create the JavaScript file, and then create a <code><span class="input">JSfileName</span>.test.js</code> to accompany it. Then add this code to the <code>package.json</code>:
+                     <div class="code block m-2">
+                        <pre>{</pre>
+                        <br><pre>   "scripts": {</pre>
+                        <br><pre>      "test": "jest"</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
+                  <li>The structure of a test should be as below:
+                     <ul>
+                        <li>Arrange: declare what a starting value (to use in the test) is. Also if needed, declare an expected result.</li>
+                        <li>Act: Enact steps to test.</li>
+                        <li>Assert: Confirm whether or not actual result matches expected result.</li>
+                     </ul>   
+                  </li>
+                  <li>Here is an example for testing an constructor's object method:</li>
+                  <div class="code block m-2">
+                     <pre>describe("<span class="input">testName</span>", () => {</pre>
+                     <br><pre>   it("<span class="input">describe what the test should do</span>", () => {</pre>
+                     <br><pre>      <span class="comment">// ARRANGE</span></pre>
+                     <br><pre>      const <span class="input">initialValue</span> = <span class="input">initialValue</span>;</pre>
+                     <br><pre>      const <span class="input">expectedResult</span> = <span class="input">expectedResult</span>;</pre>
+                     <br><pre>      <span class="comment">// ACT</span></pre>
+                     <br><pre>      const <span class="input">actualResult</span> = new <span class="input">Constructor</span>().<span class="input">method(<span class="input">initialValue</span>)</span>;</pre>
+                     <br><pre>      <span class="comment">// ASSERT</span></pre>
+                     <br><pre>      expect(<span class="input">actualResult</span>).toEqual(<span class="input">expectedResult</span>);</pre>
+                     <br><pre>   });</pre>
+                     <br><pre>});</pre>
+                  </div>
+                  <li>The test can then be run using <code>npm test</code>.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="title">
+               <h3 class="text-center py-2">Title</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-fluid visually-hidden" id="newcategory">
       <h1 class="py-4 text-center">Title</h1>
       <div class="row justify-content-evenly">
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
