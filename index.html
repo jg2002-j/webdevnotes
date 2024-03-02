@@ -97,14 +97,22 @@
                   <ul class="dropdown-menu">
                      <li><a class="dropdown-item btn btn-sm rounded" href="#constructors">Constructors</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#prototypes">Prototypes</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#">Link</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#testdrivendevelopment">Test-Driven Development</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#classes">Classes</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#subclasses">Subclasses</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#react" role="button" data-bs-toggle="dropdown" aria-expanded="false">React.js</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactbasics">React Basics</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactcss">CSS and React</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactprops">Props</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactstates">States</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactforms">Forms</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#axios">Axios</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#conditionalrender">Conditional Render</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reactrouter">React Router</a></li>
                   </ul>
                </li>
             </ul>
@@ -1309,9 +1317,10 @@
                   <li>The syntax for a constructor function is as follows:
                      <div class="code block m-2">
                         <pre>function <span class="input">ConstructorName</span>(<span class="input">parameters</span>) {</pre>
-                        <br><pre>   this.<span class="input">keyName</span> = <span class="input">value</span></pre>
+                        <br><pre>   this.<span class="input">keyName</span> = <span class="input">value;</span></pre>
                         <br><span class="comment">// If you want an object method it would be written as follows:</span>
                         <br><pre>   this.<span class="input">functionName</span> = function(){}</pre>
+                        <br><pre>}</pre>
                      </div>
                   </li>
                   <li>The constructor function can be invoked by using <code>const <span class="input">objectName</span> = new <span class="input">ConstructorName</span>(<span class="input">parameters</span>)</code>.</li>
@@ -1334,12 +1343,6 @@
                         <br><pre><span class="input">theShining</span>.<span class="input">logInfo</span>();</pre>
                      </div>
                   </li>
-               </ul>
-            </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
-               <ul>
-                  <li></li>
                </ul>
             </div>
          </div>
@@ -1378,37 +1381,202 @@
                      <br><pre>   });</pre>
                      <br><pre>});</pre>
                   </div>
-                  <li>The test can then be run using <code>npm test</code>.</li>
-               </ul>
-            </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
-               <ul>
-                  <li></li>
-               </ul>
-            </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
-               <ul>
-                  <li></li>
+                  <li>The test can then be run using <code>npm run test</code>.</li>
                </ul>
             </div>
          </div>
          <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
+            <div class="card my-2" id="classes">
+               <h3 class="text-center py-2">Classes</h3>
+               <ul>
+                  <li>Classes were introduced with the ES6 update.</li>
+                  <li>They work the same as constructor functions and are formatted like:
+                     <div class="code block m-2">
+                        <pre>class <span class="input">ClassName</span> {</pre>
+                        <br><pre>   constructor(<span class="input">parameters</span>) {</pre>
+                        <br><pre>      this.<span class="input">keyName</span> = <span class="input">value;</span></pre>
+                        <br><span class="comment">// If you want an object method it would be written as follows:</span>
+                        <br><pre>      <span class="input">functionName</span>() {}</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
+                  <li>Here is a working example:
+                     <div class="code block m-2">
+                        <pre>class Shape {</pre>
+                        <br><pre>   constructor(area, perimeter) {</pre>
+                        <br><pre>      this.area = area;</pre>
+                        <br><pre>      this.perimeter = perimeter;</pre>
+                        <br><pre>   }</pre>
+                        <br>
+                        <br><pre>   printInfo() {</pre>
+                        <br><pre>      console.log(`Area: ${this.area}`);</pre>
+                        <br><pre>      console.log(`Perimeter: ${this.perimeter}`);</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>}</pre>
+                        <br>
+                        <br><pre>const shape = new Shape(25, 25);</pre>
+                        <br><pre>shape.printInfo();</pre>
+                     </div>
+                     This would print <code>Area: 25, Perimeter: 25</code>.
+                  </li>
+                  <li>It is invoked the same way as a constructor function, with <code>const <span class="input">objectName</span> = new <span class="input">ClassName</span>(<span class="input">parameters</span>)</code>.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="subclasses">
+               <h3 class="text-center py-2">Subclasses</h3>
+               <ul>
+                  <li>Subclasses are basically just new classes that can inherit all the things you've set up in another class. They are written out as below:
+                     <div class="code block m-2">
+                        <pre>class Rectangle extends Shape {</pre>
+                        <br><pre>   constructor(sideA, sideB) {</pre>
+                        <br><pre>      const area = sideA * sideB;</pre>
+                        <br><pre>      const perimeter = sideA * 2 + sideB * 2;</pre>
+                        <br><pre>      super(area, perimeter);</pre>
+                        <br>
+                        <br><pre>      this.sideA = sideA;</pre>
+                        <br><pre>      this.sideB = sideB;</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>}</pre>
+                     </div>
+                     Here the important bits are <strong>extends</strong> in reference to the previous class this one inherits from. And the <strong>super</strong> that defines the input parameters that the original class wanted using the parameters this new Subclass accepts.
+                  </li>
+                  <li><strong><code>super()</code></strong> is how parameters are passed along from the subclass to the parent class. <strong><code>extends <span class="input">Class</span></code></strong> is how you set up a subclass.</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-fluid" id="react">
+      <h1 class="py-4 text-center">React.js</h1>
+      <div class="row justify-content-evenly">
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="reactbasics">
+               <h3 class="text-center py-2">React Basics</h3>
+               <ul>
+                  <li>To create a new react package use <code>npm create vite@latest <span class="input">fileName</span> -- --template react</code>.</li>
+                  <li>Next, run <code>npm install</code> followed by <code>npm run dev</code>.</li>
+                  <li><code>npm run dev</code> starts the live server for a react project and <code>ctrl + c</code> will kill the server.</li>
+                  <li>Functions can be created to return DOM objects, e.g.:
+                     <div class="code block m-2">
+                        <pre>function HelloReact() {</pre>
+                        <br><pre>   return &lt;p&gt;Hello World!&lt;/p&gt;;</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
+                  <li>They can then be called with <code>return &lt;HelloReact /&gt;;</code> which is equivalent to vanilla JS's <code>HelloReact()</code> - i.e. just calling a previously defined function.</li>
+                  <li>When writing the contents of the HTML, they must be wrapped in a set of <code>&lt;&gt;</code> tags.</li>
+                  <li>HTML classes must be referenced with <code>className</code> rather than <code>class</code>.</li>
+                  <li>Variables or expressions can be referenced inside components with <code>{}</code>. It works similarly to the template literal format except there is no dollar sign.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="reactcss">
+               <h3 class="text-center py-2">CSS and React</h3>
+               <ul>
+                  <li>CSS styling can either be done <strong>inline</strong> within the <code>.jsx</code> file for each component, or in a corresponding <strong>stylesheet</strong> imported into each component's page via <code>import "<span class="input">../styles/Header.css</span>";</code>.</li>
+                  <li>When using stylesheets, the styles do apply to the whole DOM, it is just that they are loaded when the corresponding component loads. With inline styling, the styles apply only to the component.</li>
+                  <li>When styled inline the CSS is treated as an object, e.g.:
+                     <div class="code block m-2">
+                        <pre>const styles = {</pre>
+                        <br><pre>   card: {</pre>
+                        <br><pre>      margin: 20,</pre>
+                        <br><pre>      background: "#e8eaf6"</pre>
+                        <br><pre>   },</pre>
+                        <br><pre>   heading: {</pre>
+                        <br><pre>      background: "#3f51b5",</pre>
+                        <br><pre>      minHeight: 50,</pre>
+                        <br><pre>      lineHeight: 3.5,</pre>
+                        <br><pre>      fontSize: "1.2rem",</pre>
+                        <br><pre>      color: "white",</pre>
+                        <br><pre>      padding: "0 20px"</pre>
+                        <br><pre>   },</pre>
+                        <br><pre>   content: {</pre>
+                        <br><pre>      padding: 20</pre>
+                        <br><pre>   }</pre>
+                        <br><pre>};</pre>                    
+                     </div>
+                     The objects can also be separated, if you're only created styles for the card, for example, you could just do <code>const cardStyles = {}</code> instead of nesting the card object within the styles object.
+                  </li>
+                  <li>In inline styling, the names (e.g. <code>font-size</code>) are switched to camel case: <code>fontSize</code>.</li>
+                  <li>Bootstrap can be added to a react project with <code>npm i --save bootstrap @popperjs/core</code> in the terminal, and <code>import "bootstrap/dist/css/bootstrap.min.css";</code> and <code>import * as bootstrap from "bootstrap"</code> in the <code>main.jsx</code> file.</li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="reactprops">
+               <h3 class="text-center py-2">Props</h3>
+               <ul>
+                  <li>Fundamentally, a React component is a JavaScript function that returns data. Each component describes and <strong>returns</strong> some part of our application's UI. Since a component is a function, it can receive arguments. This allows us to write components that behave different based on the arguments they receive. The arguments that are passed into components are called <strong>props</strong>.
+                     <div class="code block m-2">
+                        <pre>function Alert(props) {</pre>
+                        <br><pre>   return (</pre>
+                        <br><pre>      &lt;div className={`alert alert-${props.type || "success"}`} role="alert"&gt;</pre>
+                        <br><span class="comment">// If <code>props.type</code> returns as false the default value will be success which will make <code>alert-success</code> show.</span>
+                        <br><pre>         {props.children}</pre>
+                        <br><pre>      &lt;/div&gt;</pre>
+                        <br><pre>   );</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
+                  <li>The props are passed into the component in <code>App.jsx</code>, where different values can be passed into it depending on context, e.g.:
+                     <div class="code block m-2">
+                        <pre>function App() {</pre>
+                        <br><pre>   return &lt;Alert type="danger"&gt;Invalid user id or password</Alert>;</pre>
+                        <br><pre>}</pre>
+                     </div>
+                     This is returning an object:
+                     <div class="code block m-2">
+                        <pre>{</pre>
+                        <br><pre>   "type": "danger",</pre>
+                        <br><pre>   "children": "Invalid user id or password"</pre>
+                        <br><pre>}</pre>
+                     </div>
+                     <code>children</code> is always what is between the opening and closing tags of the component.
+                  </li>
+               </ul>
+            </div>
+            <div class="card my-2" id="reactstates">
+               <h3 class="text-center py-2">States</h3>
+               <ul>
+                  <li>States differ to props in that props are meant to be set in the code and never updated. States are bits of data that change upon UI interactions and change elements in turn.</li>
+                  <li>The loop in which state's operate is: the state drives UI rendering - it decides how an element is rendered. Then events (i.e. human interactions) modify the state and the cycle repeats.</li>
+                  <li>Only call Hooks from top-level components. Never from within loops, conditonals or nested functions. Only call them from React components.</li>
+                  <li>The <strong><code>useState</code> hook</strong> offers a way for components to manage state directly, eliminating the need for data retrieval through prop drilling.</li>
+                  <li><code>const [state, setState] = React.useState(<span class="input">initialValue</span>)</code></li>
+                  <li>Alternatively you can use <code>import React, { useState } from 'react';</code> which imports it deconstructed in that line so you can later use <code>useState</code> in place of <code>React.useState</code>.</li>
+                  <div class="code block m-2">
+                     <pre>const [count, setCount] = useState(0);</pre>
+                     <br>
+                     <br><pre>const handleIncrement = () => {</pre>
+                     <br><pre>   setCount(count + 1);</pre>
+                     <br><pre>};</pre>
+                  </div>
+                  <li>The above example takes a <code>state</code> of "count", a <code>setState</code> of "setCount" and an initial value of "0". The function defined below makes it so that every iteration the new value is the former value plus 1.</li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="reactforms">
+               <h3 class="text-center py-2">Forms</h3>
                <ul>
                   <li></li>
                </ul>
             </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
+            <div class="card my-2" id="axios">
+               <h3 class="text-center py-2">Axios</h3>
                <ul>
                   <li></li>
                </ul>
             </div>
-            <div class="card my-2" id="title">
-               <h3 class="text-center py-2">Title</h3>
+            <div class="card my-2" id="conditionalrender">
+               <h3 class="text-center py-2">Conditional Render</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="card my-2" id="reactrouter">
+               <h3 class="text-center py-2">React Router</h3>
                <ul>
                   <li></li>
                </ul>
