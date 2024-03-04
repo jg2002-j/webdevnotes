@@ -1235,7 +1235,7 @@
                      </div>
                      This example would add all of the input parameters that the <code>add</code> function is run with. The inputs are listed as an array, so running <code>add(1,2,3,4,5)</code> would have <code>nums</code> return as <code>[1,2,3,4,5]</code>, and the function <code>add</code> would return 1+2+3+4+5 or <code>15</code>.
                   </li>
-                  <li>The <code>spread</code> operator is a way to combine two different arrays, instead of nesting one inside another. You would use it as <code>const <span class="input">arrayOne</span> = [...<span class="input">arrayTwo</span>, "example value"]</code>, e.g.:
+                  <li id="spread">The <code>spread</code> operator is a way to combine two different arrays, instead of nesting one inside another. You would use it as <code>const <span class="input">arrayOne</span> = [...<span class="input">arrayTwo</span>, "example value"]</code>, e.g.:
                      <div class="code block m-2">
                         <pre>const fruits = ["apple", "banana", "orange"];</pre>
                         <br><pre>const foods = [...fruits, "potato", "carrot", "lettuce"];</pre>
@@ -1560,13 +1560,56 @@
             <div class="card my-2" id="reactforms">
                <h3 class="text-center py-2">Forms</h3>
                <ul>
-                  <li></li>
+                  <li>The first thing with React forms is to track the state: the form is a <strong>stateful component</strong>. However, forms differ in that there are multiple things to track. The <code>useState()</code> therefore has an object as the default value, e.g.:
+                     <div class="code block m-2">
+                        <pre>const [formData, setFormData] = useState({</pre>
+                        <br><pre>   firstName: "",</pre>
+                        <br><pre>   lastName: "",</pre>
+                        <br><pre>});</pre>
+                     </div>
+                     All this does is creates 2 things, <code>formData.firstName</code> and <code>formData.lastName</code>, that can be updated based on user input (once a function is created). The values for the two keys are blank because we don't need an actual default value.
+                  </li>
+                  <li>The input fields need to have a <strong><code>value</code>, <code>name</code>, and <code>onChange</code> function</strong>, as well as a <code>type</code> and optionally <code>placeholder</code>.
+                     <div class="code block m-2">
+                        <pre>&lt;input</pre>
+                        <br><pre>   value={formData.firstName}</pre>
+                        <br><pre>   name="firstName"</pre>
+                        <br><pre>   onChange={handleInputChange}</pre>
+                        <br><pre>   type="text"</pre>
+                        <br><pre>   placeholder="First Name"</pre>
+                        <br><pre>/&gt;</pre>
+                     </div>
+                  </li>
+                  <li>Therefore the next step is to create that function:
+                     <div class="code block m-2">
+                        <pre>const handleInputChange = (e) => {</pre>
+                        <br><span class="comment">// [1] </span>
+                        <br><pre>   const { name, value } = event.target</pre>
+                        <br><span class="comment">// [2]</span>
+                        <br><pre>   setFormData({</pre>
+                        <br><span class="comment">// [3]</span>
+                        <br><pre>      ...formData,</pre>
+                        <br><span class="comment">// [4]</span>
+                        <br><pre>      [name]: value,</pre>
+                        <br><pre>   })</pre>
+                        <br><pre>}</pre>
+                     </div>
+                     <ol>
+                        <li>We need to track the data being entered in, so we need an input parameter of <code>e</code> or <code>event</code>. Console logging <code>e.target</code> would return the element that the function is attached to, i.e. the input field. We want to access the <strong>name</strong> and <strong>value</strong> of that element specifically though, so we need <code>event.target.name</code> and <code>event.target.value</code>. When destructured, that displays as below.</li>
+                        <li>The next step is to update the state based on data the user enters. We are accessing the user data with the destructured <code>event.target.name</code> and <code>event.target.value</code> consts above. So now insert them into the <code>setFormData()</code>.</li>
+                        <li>The <strong><a href="#spread">spread operator</a></strong> is used so that the formData previously stored isn't overwritten, just added to.</li>
+                        <li>Because this function is being used in all input fields, it has to be written dynamically so that one field's data doesn't update all the states. We want to alter specifically the key value pair that's stored inside of <code>[name]</code>.</li>
+                     </ol>
+                  </li>
+                  <li>This code gets the name of the input field being altered, finds the matching object key of the <code>formData</code> state, then updates it (while keeping the previous data - thanks to the spread operator), with the value of the same input field.</li>
+                  <li>To create a form submission event, create an element that runs a function that handles form submission, and then write a function that does whatever you want with the <code>formData</code>.</li>
+                  <li>It's important to keep using <code>event.preventDefault()</code> even in React to prevent the form from refreshing the page.</li>
                </ul>
             </div>
             <div class="card my-2" id="axios">
                <h3 class="text-center py-2">Axios</h3>
                <ul>
-                  <li></li>
+                  <li>Axios is a <a target="_blank" href="https://www.npmjs.com/package/axios">npm package</a> used to make API calls.</li>
                </ul>
             </div>
             <div class="card my-2" id="conditionalrender">
