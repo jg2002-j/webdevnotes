@@ -1609,11 +1609,31 @@
             <div class="card my-2" id="axios">
                <h3 class="text-center py-2">Axios</h3>
                <ul>
-                  <li>Axios is a <a target="_blank" href="https://www.npmjs.com/package/axios">npm package</a> used to make API calls.</li>
+                  <It>Axios is a <a target="_blank" href="https://www.npmjs.com/package/axios">NPM package</a> used to make API calls. It simplifies the <code>fetch</code> function a little by removing the need to parse the <code>.json</code> data received. It needs to be installed with <code>npm i axios</code> and imported with <code>import axios from "axios";</code> as normal with a NPM package.</li>
+                  <li>A common way of using axios is to create an <code>API.js</code> file inside a <code>utils</code> folder in the react project. Inside that the function can be exported as an object method as shown below:</li>
+                     <div class="code block m-2">
+                        <pre>const baseURL = <span class="input">API Base URL</span>;</pre>
+                        <br><pre>const apiKey = <span class="input">API Key</span>;</pre>
+                        <br>
+                        <br><pre>export default {</pre>
+                        <br><pre>   search: function(query) {</pre>
+                        <br><pre>      return axios.get(baseURL + query + apiKey)</pre>
+                        <br><pre>   },</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
+                  <li>The next step is to call this method in whichever component you want to run the API search on. You can use <code>.then</code> to handle the received data asynchronously.
+                     <div class="code block m-2">
+                        <pre><span class="input">API(or whichever file the method was exported from)</span>.search(query)</pre>
+                        <br><pre>   .then((res) => <span class="input">whatever you want to do with the data</span>)</pre>
+                        <br><pre>   .catch((err) => console.log(err));</pre>
+                     </div>
+                  </li>
+                  <li>This can be combined with forms, props and states to create a dynamic API searching component.</li>
                </ul>
             </div>
             <div class="card my-2" id="conditionalrender">
-               <h3 class="text-center py-2">Conditional Render</h3>
+               <h3 class="text-center py-2">Conditional Rendering</h3>
                <ul>
                   <li></li>
                </ul>
