@@ -111,7 +111,6 @@
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactstates">States</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactforms">Forms</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#axios">Axios</a></li>
-                     <li><a class="dropdown-item btn btn-sm rounded" href="#conditionalrender">Conditional Render</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactrouter">React Router</a></li>
                   </ul>
                </li>
@@ -1555,8 +1554,6 @@
                   <li>The above example takes a <code>state</code> of "count", a <code>setState</code> of "setCount" and an initial value of "0". The function defined below makes it so that every iteration the new value is the former value plus 1.</li>
                </ul>
             </div>
-         </div>
-         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="reactforms">
                <h3 class="text-center py-2">Forms</h3>
                <ul>
@@ -1606,6 +1603,8 @@
                   <li>It's important to keep using <code>event.preventDefault()</code> even in React to prevent the form from refreshing the page.</li>
                </ul>
             </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="axios">
                <h3 class="text-center py-2">Axios</h3>
                <ul>
@@ -1632,16 +1631,40 @@
                   <li>This can be combined with forms, props and states to create a dynamic API searching component.</li>
                </ul>
             </div>
-            <div class="card my-2" id="conditionalrender">
-               <h3 class="text-center py-2">Conditional Rendering</h3>
-               <ul>
-                  <li></li>
-               </ul>
-            </div>
             <div class="card my-2" id="reactrouter">
                <h3 class="text-center py-2">React Router</h3>
                <ul>
-                  <li></li>
+                  <li>Conditional rendering is the selective rendering of components based on conditions. There are 2 main ways to do this, a) using the <a href="#ternaryop">ternary operator</a> to render one thing if truthy and another if falsy; or b) using an if-else statement.</li>
+                  <li>React Router simulates page navigation by conditionally rendering different components.</li>
+                  <li>Therefore the faster way to do this in React is with React Router. <a target="_blank" href="https://reactrouter.com/en/main">React Router</a> is another <a target="_blank" href="https://www.npmjs.com/package/react-router-dom">NPM package</a>, install with <code>npm i react-router-dom</code> and then add <code>import { BrowserRouter as Router, Route, Routes } from "react-router-dom";</code> to <code>App.jsx</code>.
+                  </li>
+                  <div class="code block m-2">
+                     <pre>function App() {</pre>
+                     <br><pre>   return(</pre>
+                     <br><pre>      &lt;Router&gt;</pre>
+                     <br><pre>         &lt;<span class="input">elementName</span>&gt;</pre><span class="comment"> // [1]</span>
+                     <br><pre>         &lt;Routes&gt;</pre><span class="comment"> // [2]</span>
+                     <br><pre>            &lt;Route path="<span class="input">path</span>" element="<span class="input">elementName</span>" /></pre><span class="comment"> // [3]</span>
+                     <br><pre>            &lt;Route path="<span class="input">path</span>/*" element="<span class="input">elementName</span>" /></pre><span class="comment"> // [4]</span>
+                  </div>
+                  <ol>
+                     <li>This element renders all the time, as it is outside of the <code>Routes</code> component.</li>
+                     <li>The Route elements are wrapped inside a <code>Routes</code> component.</li>
+                     <li>THe path is the thing that displays in the browser URL. The element is what conditionally renders and is written as an element inside curly brackets, e.g.: <code>element=<span class="input">{&lt;Home /&gt;}</span></code>.</li>
+                     <li>To define a route that will have descendant routes, use <code>/*</code> inside the path.</li>
+                  </ol>
+                  <li>React router also contains 2 other common components: <code>NavLink</code> and <code>Link</code>, which can be imported via <code>import { NavLink, Link } from "react-router-dom";</code> inside a JSX file. These <strong>replace anchor tags</strong> for navigating within the same website. If you wanted to navigate to another site, then a regular anchor tab could be used.</li>
+                  <li>The key difference between <code>NavLink</code> and <code>Link</code> is that <code>NavLink</code> tracks the active page, which is useful for styling, whereas <code>Link</code> doesn't. The easiest way to do this is to use a ternary statement in the <code>className</code> of a <code>NavLink</code> element, e.g.:
+                     <div class="code block m-2">
+                        <pre>&lt;NavLink</pre>
+                        <br><pre>   to="<span class="input">path</span>"</pre>
+                        <br><pre>   className={({isActive}) =></pre>
+                        <br><pre>      isActive ? "<span class="input">nav-link active</span>" : "<span class="input">nav-link</span>"</pre>
+                        <br><pre>   }</pre>
+                     </div>
+                     All this does is put <code>className</code> as (in this example) <code>nav-link active</code> if <code>isActive</code> returns truthy, or just <code>nav-link</code> if falsy.
+                  </li>
+                  <li>The basic pattern with using React Router is to set up <code>Routes</code> on the homepage, and to use <code>NavLink</code> or <code>Link</code> anywhere else within the project.</li>
                </ul>
             </div>
          </div>
