@@ -109,9 +109,11 @@
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactcss">CSS and React</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactprops">Props</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactstates">States</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#reacthooks">Hooks</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactforms">Forms</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#axios">Axios</a></li>
                      <li><a class="dropdown-item btn btn-sm rounded" href="#reactrouter">React Router</a></li>
+                     <li><a class="dropdown-item btn btn-sm rounded" href="#netlify">Netlify</a></li>
                   </ul>
                </li>
             </ul>
@@ -1501,8 +1503,6 @@
                   <li>Bootstrap can be added to a react project with <code>npm i --save bootstrap @popperjs/core</code> in the terminal, and <code>import "bootstrap/dist/css/bootstrap.min.css";</code> and <code>import * as bootstrap from "bootstrap"</code> in the <code>main.jsx</code> file.</li>
                </ul>
             </div>
-         </div>
-         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
             <div class="card my-2" id="reactprops">
                <h3 class="text-center py-2">Props</h3>
                <ul>
@@ -1540,10 +1540,9 @@
                <ul>
                   <li>States differ to props in that props are meant to be set in the code and never updated. States are bits of data that change upon UI interactions and change elements in turn.</li>
                   <li>The loop in which state's operate is: the state drives UI rendering - it decides how an element is rendered. Then events (i.e. human interactions) modify the state and the cycle repeats.</li>
-                  <li>Only call Hooks from top-level components. Never from within loops, conditonals or nested functions. Only call them from React components.</li>
                   <li>The <strong><code>useState</code> hook</strong> offers a way for components to manage state directly, eliminating the need for data retrieval through prop drilling.</li>
                   <li><code>const [state, setState] = React.useState(<span class="input">initialValue</span>)</code></li>
-                  <li>Alternatively you can use <code>import React, { useState } from 'react';</code> which imports it deconstructed in that line so you can later use <code>useState</code> in place of <code>React.useState</code>.</li>
+                  <li id="reactusestate">Alternatively you can use <code>import React, { useState } from 'react';</code> which imports it deconstructed in that line so you can later use <code>useState</code> in place of <code>React.useState</code>.</li>
                   <div class="code block m-2">
                      <pre>const [count, setCount] = useState(0);</pre>
                      <br>
@@ -1552,6 +1551,88 @@
                      <br><pre>};</pre>
                   </div>
                   <li>The above example takes a <code>state</code> of "count", a <code>setState</code> of "setCount" and an initial value of "0". The function defined below makes it so that every iteration the new value is the former value plus 1.</li>
+                  <li>When updating the state of an object, make sure to use the <strong>spread (<code>...</code>)</strong> operator to not entirely redefine the object upon updating the state, e.g.:
+                     <div class="code block m-2">
+                        <pre>const [ houseState, setHouseState ] = React.useState({</pre>
+                        <br><pre>   doors: 4,</pre>
+                        <br><pre>   windows: 23,</pre>
+                        <br><pre>   occupants: 5,</pre>
+                        <br><pre>   name: "House",</pre>
+                        <br><pre>})</pre>
+                        <br>
+                        <br><span class="comment">// ...</span>
+                        <br><pre>setHouseState({ ...houseState, doors: 7 })</pre>
+                        <br><span class="comment">// This retains all the other key-value pairs in the object, and updates only the doors.</span>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="row px-3 col-lg-12 col-xl-4 d-flex align-content-start">
+            <div class="card my-2" id="reacthooks">
+               <h3 class="text-center py-2">Hooks & State Management</h3>
+               <ul>
+                  <li>Hooks are functions that allow us to extend the capabilities of our components.</li>
+                  <li><strong>Only call Hooks from top-level components. Never from within loops, conditonals or nested functions. Only call them from React components, never from JS functions.</strong></li>
+                  <li>"State" is a specialized property that is used for component specific storage data. Whenever state is updated, the <code>.jsx</code> component is re-rendered.</li>
+                  <h5 class="mt-4"><code>useState</code> Hook</h5>
+                  <li>See <a href="#reactstates">states</a>.</li>
+
+                  <h5 class="mt-4"><code>useEffect</code> Hook</h5>
+                  <li><code>useEffect</code> can be imported the same way as <a href="#reactusestate">useState</a> or used with <code>React.useEffect</code>.</li>
+                  <li>Effects, a.k.a. side effects, are bits of code that are responsible for managing external interactions (e.g. Data fetching / API calls, subscribing to events, changes to the DOM).</li>
+                  <li><code>useEffect</code> takes two arguments, first a <strong>callback function</strong> and second an <strong>array of dependencies</strong>. When the component re-renders, <code>useEffect</code> re-runs its callback function if any dependency values change.</li>
+                  <li>By specifying dependencies, we can control when the hook runs, avoiding unecessary executions of the callback function.</li>
+                  <li>If <code>props.name</code> is specified, <code>useEffect</code> runs once on initial page render, and subsequently whenever <code>props.name</code> changes:
+                     <div class="code block m-2">
+                        <pre>useEffect(() => {</pre>
+                        <br><pre>   <span class="input">callback function</span></pre>
+                        <br><pre>}, [props.name]);</pre>
+                     </div>
+                     If an empty array is provided, <code>useEffect</code> will only run the first time the component renders.
+                     <div class="code block m-2">
+                        <pre>useEffect(() => {</pre>
+                        <br><pre>   <span class="input">callback function</span></pre>
+                        <br><pre>}, []);</pre>
+                     </div>
+                  </li>
+
+                  <h5 class="mt-4">Custom Hooks</h5>
+                  <li>Any custom hook has to start with <code>use</code> like <code>useState</code> or <code>useEffect</code>.</li>
+                  <li>They're best suited to extract logic that may be repeated, and therefore a good practice to keep React functions cleaner.</li>
+                  <li>The general pattern for a custom hook can be:
+                     <div class="code block m-2">
+                           <pre>function use<span class="input">hookName</span>() {</pre>
+                           <br><pre>   const [ state, setState ] = useState();</pre>
+                           <br><span class="comment">// Set a state for the hook that updates based on the code inside the hook.</span>
+                           <br><pre>   <span class="input">// Code that performs the purpose of the hook.</span></pre>
+                           <br>
+                           <br><pre>   return <span class="input">setState</span></pre>
+                           <br><span class="comment">// return a value that can be read by the elements that use the hook.</span>
+                           <br><pre>}</pre>
+                     </div>
+                     Here is an example:
+                     <div class="code block m-2">
+                        <pre>function useCounter() {</pre>
+                        <br><pre>   const [ count, setCount ] = useState(0)</pre>
+                        <br><span class="comment">// State to keep track of, that updates based on code inside the code.</span>
+                        <br><pre>   const increment = () => setCount(count + 1)</pre>
+                        <br><span class="comment">// A function that changes state.</span>
+                        <br><pre>   return [ count, increment]</pre>
+                        <br><span class="comment">// Returns the "count" value and the "increment" function.</span>
+                        <br>
+                        <br><span class="comment">-------</span>
+                        <br><pre>function CounterComponent() {</pre>
+                        <br><pre>   const [ count, increment ] = useCounter()</pre>
+                        <br><pre>   return (</pre>
+                        <br><pre>      &lt;&gt;</pre>
+                        <br><pre>         &lt;p&gt;Count: {count}&lt;/p&gt;</pre>
+                        <br><pre>         &lt;button onClick={increment}&gt;Add 1&lt;/button&gt;</pre>
+                        <br><pre>      &lt;/&gt;</pre>
+                        <br><pre>   )</pre>
+                        <br><pre>}</pre>
+                     </div>
+                  </li>
                </ul>
             </div>
             <div class="card my-2" id="reactforms">
@@ -1665,6 +1746,12 @@
                      All this does is put <code>className</code> as (in this example) <code>nav-link active</code> if <code>isActive</code> returns truthy, or just <code>nav-link</code> if falsy.
                   </li>
                   <li>The basic pattern with using React Router is to set up <code>Routes</code> on the homepage, and to use <code>NavLink</code> or <code>Link</code> anywhere else within the project.</li>
+               </ul>
+            </div>
+            <div class="card my-2" id="netlify">
+               <h3 class="text-center py-2">Netlify Deployment</h3>
+               <ul>
+                  <li></li>
                </ul>
             </div>
          </div>
